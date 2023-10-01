@@ -1,0 +1,15 @@
+.white-border-bottom {
+    & .MuiInputBase-root {
+        color: white; /* Ustawia kolor czcionki TextField na biały */
+    }
+    & .MuiInputLabel-root {
+        color: white; /* Ustawia kolor labela TextField na biały */
+    }
+
+    & .MuiInput-underline:before {
+        border-bottom-color: white;
+    }
+    & .MuiInput-underline:hover:not(.Mui-disabled):before {
+        border-bottom-color: white;
+    }
+}

@@ -1,0 +1,1571 @@
+[
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "owner": 6,
+      "name": "Wprowadzenie do Palety Kolorów w Figma",
+      "description": "Sesja wprowadzająca na temat tworzenia i używania palety kolorów w aplikacji Figma",
+      "created_at": "2023-10-01T00:47:23.421Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "owner": 2,
+      "name": "Tworzenie Microsoft Power Apps bez linijki kodu",
+      "description": "Wprowadzenie do Power Apps dla Osób Niebędących Programistami",
+      "created_at": "2023-10-01T00:57:15.470Z",
+      "tags": [
+        14,
+        15
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "owner": 3,
+      "name": "Tworzenie i Zarządzanie Postami i Stronami w WordPress",
+      "description": "Naucz się tworzyć i formatować posty na blogu.",
+      "created_at": "2023-10-01T01:04:02.676Z",
+      "tags": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "owner": 4,
+      "name": "Dostosowywanie Motywów WordPress",
+      "description": "Naucz się modyfikować i dostosowywać Motywy na platformie WordPress",
+      "created_at": "2023-10-01T01:12:33.441Z",
+      "tags": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "owner": 4,
+      "name": "Podstawy Marketingu Cyfrowego",
+      "description": "Poznanie podstaw marketingu cyfrowego, w tym SEO, marketingu w mediach społecznościowych, marketingu mailowego i reklamy online. Nauka tworzenia i zarządzania kampaniami marketingowymi. Zrozumienie kluczowych wskaźników efektywności (KPI) w marketingu online.",
+      "created_at": "2023-10-01T01:21:35.686Z",
+      "tags": [
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "owner": 6,
+      "name": "Kurs Podstawowych Właściwości CSS i Selektorów",
+      "description": "Naucz się podstawowych właściwości CSS i selektorów, aby efektywnie stylizować strony internetowe.",
+      "created_at": "2023-10-01T01:35:48.121Z",
+      "tags": [
+        9,
+        19,
+        20
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "owner": 2,
+      "name": "CSS - Kurs Układu i Modelu Pudełkowego",
+      "description": "Odkryj model pudełkowy CSS i naucz się kontrolować układ stron internetowych.",
+      "created_at": "2023-10-01T01:36:07.537Z",
+      "tags": [
+        9,
+        20,
+        21
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "owner": 3,
+      "name": "Kurs Stylizacji Łączy i List w CSS",
+      "description": "Opanuj sztukę stylizacji hiperłączy i dostosowywania list w CSS.",
+      "created_at": "2023-10-01T01:36:21.751Z",
+      "tags": [
+        9,
+        20,
+        22
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "owner": 4,
+      "name": "Kurs Podstaw HTML i Tworzenia Stron Internetowych",
+      "description": "Zapoznaj się z podstawami języka HTML i naucz się tworzyć proste strony internetowe.",
+      "created_at": "2023-10-01T01:38:30.946Z",
+      "tags": [
+        13,
+        20,
+        23
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 10,
+    "fields": {
+      "owner": 5,
+      "name": "Kurs Formularzy w HTML",
+      "description": "Nauka tworzenia interaktywnych formularzy na stronach internetowych za pomocą HTML.",
+      "created_at": "2023-10-01T01:38:50.709Z",
+      "tags": [
+        13,
+        20,
+        24
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 11,
+    "fields": {
+      "owner": 1,
+      "name": "Kurs Semantyki w HTML",
+      "description": "Zrozumienie semantyki HTML i jej roli w tworzeniu dostępnych i zrozumiałych stron internetowych.",
+      "created_at": "2023-10-01T01:39:05.849Z",
+      "tags": [
+        13,
+        20,
+        25
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 12,
+    "fields": {
+      "owner": 1,
+      "name": "Kurs Grafiki i Multimediów w HTML",
+      "description": "Nauka dodawania grafiki, dźwięku i wideo do stron internetowych przy użyciu HTML.",
+      "created_at": "2023-10-01T01:39:39.454Z",
+      "tags": [
+        13,
+        20,
+        26,
+        27
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 13,
+    "fields": {
+      "owner": 7,
+      "name": "Kurs Podstaw Programowania w Scratch",
+      "description": "Rozpocznij swoją przygodę z programowaniem w Scratch, w środowisku przyjaznym dla początkujących programistów.",
+      "created_at": "2023-10-01T01:45:31.116Z",
+      "tags": [
+        20,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 14,
+    "fields": {
+      "owner": 7,
+      "name": "Kurs Tworzenia Gier w Scratch",
+      "description": "Odkryj świat tworzenia gier komputerowych w Scratch i stwórz własne gry interaktywne.",
+      "created_at": "2023-10-01T01:45:53.613Z",
+      "tags": [
+        20,
+        28,
+        30
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 15,
+    "fields": {
+      "owner": 4,
+      "name": "Kurs Animacji w Scratch",
+      "description": "Nauka tworzenia animacji i filmów w Scratch, przy użyciu bloków i scenariuszy.",
+      "created_at": "2023-10-01T01:46:07.244Z",
+      "tags": [
+        20,
+        28,
+        31
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 16,
+    "fields": {
+      "owner": 5,
+      "name": "Kurs Tworzenia Muzyki w Scratch",
+      "description": "Zdobądź umiejętność tworzenia własnej muzyki i dźwięków w Scratch.",
+      "created_at": "2023-10-01T01:46:20.775Z",
+      "tags": [
+        20,
+        28,
+        32
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 17,
+    "fields": {
+      "owner": 1,
+      "name": "Kurs Podstaw Korzystania z Figma",
+      "description": "Rozpocznij swoją przygodę z Figma, narzędziem do projektowania interfejsów użytkownika, i naucz się jego podstawowych funkcji.",
+      "created_at": "2023-10-01T01:47:50.009Z",
+      "tags": [
+        12,
+        20,
+        33
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 18,
+    "fields": {
+      "owner": 2,
+      "name": "Kurs Tworzenia Projektów Webowych w Figma",
+      "description": "Nauka projektowania stron internetowych i interfejsów użytkownika przy użyciu Figma.",
+      "created_at": "2023-10-01T01:48:08.437Z",
+      "tags": [
+        12,
+        20,
+        34
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 19,
+    "fields": {
+      "owner": 3,
+      "name": "Kurs Tworzenia Grafiki i Ikony w Figma",
+      "description": "Opanuj sztukę tworzenia grafiki, ikon i ilustracji przy użyciu narzędzi Figma.",
+      "created_at": "2023-10-01T01:48:27.867Z",
+      "tags": [
+        12,
+        20,
+        35
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 20,
+    "fields": {
+      "owner": 4,
+      "name": "Kurs Prototypowania Aplikacji w Figma",
+      "description": "Nauka tworzenia interaktywnych prototypów aplikacji mobilnych i webowych przy użyciu Figma.",
+      "created_at": "2023-10-01T01:48:40.771Z",
+      "tags": [
+        12,
+        20,
+        36
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 21,
+    "fields": {
+      "owner": 5,
+      "name": "Kurs Podstaw Microsoft Power Apps",
+      "description": "Rozpocznij naukę tworzenia aplikacji biznesowych za pomocą Microsoft Power Apps i zdobądź umiejętności podstawowe.",
+      "created_at": "2023-10-01T01:50:23.419Z",
+      "tags": [
+        20,
+        37,
+        38
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 22,
+    "fields": {
+      "owner": 1,
+      "name": "Kurs Tworzenia Formularzy i Aplikacji Mobilnych w Power Apps",
+      "description": "Opanuj sztukę projektowania formularzy i aplikacji mobilnych w Microsoft Power Apps.",
+      "created_at": "2023-10-01T01:50:55.369Z",
+      "tags": [
+        20,
+        37,
+        39,
+        40
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 23,
+    "fields": {
+      "owner": 3,
+      "name": "Kurs Tworzenia Aplikacji Workflow w Power Apps",
+      "description": "Nauka tworzenia aplikacji workflow, które automatyzują procesy biznesowe, przy użyciu Microsoft Power Apps.",
+      "created_at": "2023-10-01T01:51:17.580Z",
+      "tags": [
+        20,
+        37,
+        41
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 24,
+    "fields": {
+      "owner": 2,
+      "name": "Kurs Tworzenia Dostosowanych Rozwiązań w Power Apps",
+      "description": "Zdobądź umiejętności tworzenia niestandardowych rozwiązań biznesowych w Microsoft Power Apps.",
+      "created_at": "2023-10-01T01:51:44.702Z",
+      "tags": [
+        20,
+        37,
+        42
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 25,
+    "fields": {
+      "owner": 4,
+      "name": "Kurs Podstaw OutSystems",
+      "description": "Rozpocznij naukę tworzenia aplikacji za pomocą platformy OutSystems i zdobądź umiejętności podstawowe.",
+      "created_at": "2023-10-01T01:54:27.298Z",
+      "tags": [
+        20,
+        43,
+        44
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 26,
+    "fields": {
+      "owner": 5,
+      "name": "Kurs Tworzenia Aplikacji Mobilnych w OutSystems",
+      "description": "Nauka projektowania i tworzenia aplikacji mobilnych przy użyciu platformy OutSystems.",
+      "created_at": "2023-10-01T01:54:40.127Z",
+      "tags": [
+        20,
+        43,
+        45
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 27,
+    "fields": {
+      "owner": 1,
+      "name": "Kurs Tworzenia Workflowów w OutSystems",
+      "description": "Nauka tworzenia workflowów i automatyzacji procesów biznesowych za pomocą platformy OutSystems.",
+      "created_at": "2023-10-01T01:54:49.572Z",
+      "tags": [
+        20,
+        41,
+        43
+      ]
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 1,
+    "fields": {
+      "name": "Wprowadzenie do Koloru w Projektowaniu",
+      "description": "Powitanie i przegląd kursu. Znaczenie koloru w projektowaniu. Krótka dyskusja na temat teorii kolorów.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 2,
+    "fields": {
+      "name": "Tworzenie Palety Kolorów",
+      "description": "Wprowadzenie do koncepcji palety kolorów. Dodawanie i organizowanie kolorów w Figma. Exploracja stylów kolorów i panelu zasobów. Nadawanie nazw i zapisywanie stylów kolorów.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 3,
+    "fields": {
+      "name": "Dostosowywanie i Edytowanie Kolorów",
+      "description": "Dostosowywanie kolorów za pomocą selektora kolorów. Używanie wartości heksadecymalnych i RGB. Badanie gradientów i przezroczystości.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 4,
+    "fields": {
+      "name": "Zastosowanie Kolorów do Elementów Projektu",
+      "description": "Stosowanie stylów kolorów do kształtów i tekstu. Tworzenie prostego projektu przy użyciu palety kolorów. Przedstawienie spójności kolorów w projektach.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 5,
+    "fields": {
+      "name": "Udostępnianie i Współpraca",
+      "description": "Krótka prezentacja udostępniania plików Figma w celu współpracy. Jak udostępnić paletę kolorów współpracownikom lub zainteresowanym stronom.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 6,
+    "fields": {
+      "name": "Porady i Najlepsze Praktyki",
+      "description": "Najlepsze praktyki tworzenia efektywnych palet kolorów. Rozważania dotyczące dostępności podczas wyboru kolorów. Wskazówki dotyczące utrzymania spójności w projektach projektowych.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 7,
+    "fields": {
+      "name": "Praktyczne Zajęcia",
+      "description": "Uczestnicy praktykują tworzenie i używanie palety kolorów w Figma. Pomoc i wsparcie instruktora według potrzeb.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 8,
+    "fields": {
+      "name": "Pytania i Dyskusja",
+      "description": "Otwarta przestrzeń na pytania i dyskusje. Dzielenie się spostrzeżeniami i doświadczeniami.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 9,
+    "fields": {
+      "name": "Podsumowanie i Zakończenie",
+      "description": "Podsumowanie kluczowych wniosków z warsztatu. Zachęta dla uczestników do dalszego eksplorowania funkcji kolorów w Figma. Rozprowadzenie materiałów kursowych i źródeł do dalszego nauki.",
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 10,
+    "fields": {
+      "name": "Powitanie i Przegląd Kursu",
+      "description": "Przedstawienie warsztatów i instruktora. Przegląd tego, czego uczestnicy się nauczą podczas warsztatów.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 11,
+    "fields": {
+      "name": "Zrozumienie Power Apps",
+      "description": "Co to jest Microsoft Power Apps? Korzyści z korzystania z Power Apps dla osób niebędących programistami.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 12,
+    "fields": {
+      "name": "Rozpoczęcie Pracy z Power Apps",
+      "description": "Konfiguracja środowiska Power Apps i konta. Eksploracja interfejsu Power Apps.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 13,
+    "fields": {
+      "name": "Tworzenie Pierwszej Aplikacji",
+      "description": "Tworzenie nowej aplikacji na podstawie szablonu. Dodawanie i układanie elementów na płótnie aplikacji. Prosta integracja danych (np. arkusz Excel).",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 14,
+    "fields": {
+      "name": "Dostosowywanie Aplikacji",
+      "description": "Modyfikowanie układów i projektów aplikacji. Dodawanie ekranów i nawigacji. Implementacja podstawowej logiki bez użycia kodu.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 15,
+    "fields": {
+      "name": "Integracja Danych",
+      "description": "Łączenie Power Apps z źródłami danych (np. SharePoint, Excel). Praca z tabelami i formularzami do wprowadzania i wyświetlania danych.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 16,
+    "fields": {
+      "name": "Testowanie Aplikacji",
+      "description": "Podgląd i testowanie aplikacji w Power Apps. Identyfikacja i rozwiązywanie typowych problemów.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 17,
+    "fields": {
+      "name": "Udostępnianie i Wdrożenie",
+      "description": "Opcje udostępniania aplikacji innym osobom. Zrozumienie wdrożenia aplikacji w ramach organizacji.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 18,
+    "fields": {
+      "name": "Najlepsze Praktyki i Wskazówki",
+      "description": "Wskazówki dotyczące projektowania przyjaznych dla użytkownika i efektywnych aplikacji. Typowe błędy, których należy unikać.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 19,
+    "fields": {
+      "name": "Pytania i Dyskusja",
+      "description": "Otwarta przestrzeń na pytania i dyskusje. Dzielenie się spostrzeżeniami i doświadczeniami.",
+      "course": 2
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 20,
+    "fields": {
+      "name": "Wprowadzenie do Postów i Stron w WordPress",
+      "description": "Powitanie i przegląd kursu. Wyjaśnienie różnicy między postami a stronami w WordPress.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 21,
+    "fields": {
+      "name": "Dostęp do Kokpitu WordPress",
+      "description": "Logowanie do Twojej strony WordPress. Nawigacja do kokpitu WordPress.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 22,
+    "fields": {
+      "name": "Tworzenie Twojego Pierwszego Posta",
+      "description": "Jak stworzyć nowy wpis na blogu. Zrozumienie interfejsu edytora wpisów. Dodawanie i formatowanie tekstu.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 23,
+    "fields": {
+      "name": "Dodawanie Mediów do Postów",
+      "description": "Wstawianie obrazów i filmów do wpisów. Zarządzanie mediami w bibliotece mediów.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 24,
+    "fields": {
+      "name": "Tworzenie i Zarządzanie Stronami",
+      "description": "Tworzenie statycznych stron na Twojej stronie internetowej (np. O nas, Kontakt). Podobieństwa i różnice między stronami a postami.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 25,
+    "fields": {
+      "name": "Kategorie i Tagi",
+      "description": "Badanie roli kategorii i tagów w organizacji treści. Jak przypisywać kategorie i tagi do wpisów.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 26,
+    "fields": {
+      "name": "Publikowanie Twojej Treści",
+      "description": "Ustawianie statusu publikacji i daty dla wpisów i stron. Podgląd i zapisywanie szkiców.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 27,
+    "fields": {
+      "name": "Edycja i Aktualizacja Treści",
+      "description": "Jak wprowadzać zmiany w istniejących wpisach i stronach. Zapisywanie i aktualizowanie treści.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 28,
+    "fields": {
+      "name": "Pytania i Podsumowanie",
+      "description": "Otwarta przestrzeń na pytania i dyskusje. Podsumowanie głównych punktów omawianych podczas sesji.",
+      "course": 3
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 29,
+    "fields": {
+      "name": "Wprowadzenie do Dostosowywania Motywów WordPress",
+      "description": "Powitanie i przegląd kursu. Dlaczego dostosowywanie motywów jest ważne w WordPress.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 30,
+    "fields": {
+      "name": "Dostęp do Kokpitu WordPress",
+      "description": "Logowanie do Twojej strony WordPress. Nawigacja do kokpitu WordPress.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 31,
+    "fields": {
+      "name": "Wybór i Instalacja Motywu",
+      "description": "Wybór motywu z repozytorium motywów WordPress. Instalacja i aktywacja wybranego motywu.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 32,
+    "fields": {
+      "name": "Dostosowywanie Motywu w Personalizatorze",
+      "description": "Korzystanie z personalizatora do dostosowywania wyglądu motywu. Zmiana kolorów, czcionek, tła itp.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 33,
+    "fields": {
+      "name": "Nagłówki i Tło",
+      "description": "Dostosowywanie nagłówków strony. Zmiana tła i obrazów nagłówka.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 34,
+    "fields": {
+      "name": "Dodawanie Logo",
+      "description": "Dodawanie i dostosowywanie logo witryny.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 35,
+    "fields": {
+      "name": "Dostosowywanie Szerokości i Układu",
+      "description": "Regulowanie szerokości i układu strony. Wybór kolumn i ustawienia stron.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 36,
+    "fields": {
+      "name": "Menu Nawigacyjne",
+      "description": "Tworzenie i dostosowywanie menu nawigacyjnego. Dodawanie i usuwanie pozycji menu.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 37,
+    "fields": {
+      "name": "Widgety i Paski Boczne",
+      "description": "Dodawanie i dostosowywanie widgetów w paskach bocznych.\r\nWybór i konfiguracja widgetów.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 38,
+    "fields": {
+      "name": "Zapisywanie i Publikacja Dostosowań",
+      "description": "Zapisywanie dostosowań motywu. Publikacja zmian na żywo na stronie.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 39,
+    "fields": {
+      "name": "Pytania i Podsumowanie",
+      "description": "Otwarta przestrzeń na pytania i dyskusje. Podsumowanie głównych punktów omawianych podczas sesji.",
+      "course": 4
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 40,
+    "fields": {
+      "name": "Wprowadzenie do Marketingu Cyfrowego",
+      "description": "Definicja i znaczenie marketingu cyfrowego. Korzyści i cele marketingu cyfrowego. Podstawowe kanały i narzędzia marketingu online.",
+      "course": 5
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 41,
+    "fields": {
+      "name": "SEO i Optymalizacja Stron",
+      "description": "Zrozumienie SEO (Optymalizacja dla Wyszukiwarek Internetowych). Kluczowe elementy optymalizacji on-page i off-page. Rola słów kluczowych i analiza konkurencji.",
+      "course": 5
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 42,
+    "fields": {
+      "name": "Marketing w Mediach Społecznościowych",
+      "description": "Wykorzystanie mediów społecznościowych w marketingu cyfrowym. Tworzenie i zarządzanie kampaniami reklamowymi. Monitorowanie i analiza wyników w mediach społecznościowych.",
+      "course": 5
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 43,
+    "fields": {
+      "name": "Email Marketing i Reklama Online",
+      "description": "Strategie email marketingu. Reklama online, w tym reklama płatna i kampanie reklamowe. Pomiar skuteczności kampanii.",
+      "course": 5
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 44,
+    "fields": {
+      "name": "Wprowadzenie do CSS",
+      "description": "Krótka prezentacja wprowadzająca do CSS i jego znaczenia.",
+      "course": 6
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 45,
+    "fields": {
+      "name": "Podstawowe Właściwości CSS",
+      "description": "Omówienie podstawowych właściwości CSS, takich jak kolor, rozmiar czcionki itp.",
+      "course": 6
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 46,
+    "fields": {
+      "name": "Selektory CSS",
+      "description": "Wyjaśnienie różnych rodzajów selektorów CSS.",
+      "course": 6
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 47,
+    "fields": {
+      "name": "Stosowanie Stylów do Elementów HTML",
+      "description": "Praktyczne ćwiczenia z dodawania stylów do elementów HTML.",
+      "course": 6
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 48,
+    "fields": {
+      "name": "Zrozumienie Modelu Pudełkowego",
+      "description": "Szczegółowe wyjaśnienie modelu pudełkowego CSS.",
+      "course": 7
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 49,
+    "fields": {
+      "name": "Kontrolowanie Układu za pomocą CSS",
+      "description": "Praktyczne przykłady na temat kontroli układu stron.",
+      "course": 7
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 50,
+    "fields": {
+      "name": "Responsywne Układy",
+      "description": "Nauka tworzenia responsywnych układów za pomocą flexbox i siatki CSS.",
+      "course": 7
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 51,
+    "fields": {
+      "name": "Stylizacja Hiperłączy",
+      "description": "Praktyczne wskazówki dotyczące stylizacji hiperłączy.",
+      "course": 8
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 52,
+    "fields": {
+      "name": "Dostosowywanie List",
+      "description": "Techniki dostosowywania punktowych i numerowanych list.",
+      "course": 8
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 53,
+    "fields": {
+      "name": "Tworzenie Menu Nawigacyjnych",
+      "description": "Jak tworzyć atrakcyjne menu nawigacyjne przy użyciu CSS.",
+      "course": 8
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 54,
+    "fields": {
+      "name": "Ćwiczenia Praktyczne",
+      "description": "Praktyczne ćwiczenia pozwalające zastosować zdobytą wiedzę.",
+      "course": 8
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 55,
+    "fields": {
+      "name": "Wprowadzenie do HTML",
+      "description": "Podstawy języka HTML i jego znaczenie.",
+      "course": 9
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 56,
+    "fields": {
+      "name": "Tworzenie Struktury Strony",
+      "description": "Elementy struktury strony, takie jak nagłówek, paragraf i lista.",
+      "course": 9
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 57,
+    "fields": {
+      "name": "Dodawanie Obrazów i Linków",
+      "description": "Jak wstawiać obrazy i linki do strony.",
+      "course": 9
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 58,
+    "fields": {
+      "name": "Podstawy Formatowania Tekstu",
+      "description": "Proste formatowanie tekstu w HTML.",
+      "course": 9
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 59,
+    "fields": {
+      "name": "Tworzenie Formularzy",
+      "description": "Podstawy tworzenia formularzy w HTML.",
+      "course": 10
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 60,
+    "fields": {
+      "name": "Różne Typy Pól Formularza",
+      "description": "Jak dodawać pola tekstowe, przyciski i checkboxy.",
+      "course": 10
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 61,
+    "fields": {
+      "name": "Walidacja Formularzy",
+      "description": "Sprawdzanie i walidacja danych wprowadzanych przez użytkowników.",
+      "course": 10
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 62,
+    "fields": {
+      "name": "Przesyłanie Formularzy",
+      "description": "Jak przesyłać dane z formularzy na serwer.",
+      "course": 10
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 63,
+    "fields": {
+      "name": "Semantyka w HTML",
+      "description": "Rola semantyki w HTML i jej znaczenie.",
+      "course": 11
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 64,
+    "fields": {
+      "name": "Znaczniki Semantyczne",
+      "description": "Praktyczne użycie znaczników semantycznych, takich jak <header>, <nav>, i <article>.",
+      "course": 11
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 65,
+    "fields": {
+      "name": "Dostępność i SEO",
+      "description": "Jak semantyka wpływa na dostępność i pozycjonowanie stron.",
+      "course": 11
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 66,
+    "fields": {
+      "name": "Ćwiczenia Praktyczne",
+      "description": "Praktyczne zadania z użyciem znaczników semantycznych.",
+      "course": 11
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 67,
+    "fields": {
+      "name": "Wstawianie Obrazów",
+      "description": "Jak dodawać obrazy do stron internetowych.",
+      "course": 12
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 68,
+    "fields": {
+      "name": "Audio i Video HTML5",
+      "description": "Wprowadzenie do dodawania i odtwarzania dźwięku i wideo w HTML5.",
+      "course": 12
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 69,
+    "fields": {
+      "name": "Mapy Obrazów",
+      "description": "Tworzenie interaktywnych map obrazów.",
+      "course": 12
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 70,
+    "fields": {
+      "name": "Multimedia i Dostępność",
+      "description": "Zasady dotyczące dostępności multimediów w HTML.",
+      "course": 12
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 71,
+    "fields": {
+      "name": "Wprowadzenie do Scratch",
+      "description": "Ogólny przegląd środowiska Scratch i jego interfejsu.",
+      "course": 13
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 72,
+    "fields": {
+      "name": "Ruch i Dźwięk",
+      "description": "Tworzenie pierwszych projektów, w tym animacji ruchu i dźwięku.",
+      "course": 13
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 73,
+    "fields": {
+      "name": "Warunki i Pętle",
+      "description": "Nauka tworzenia warunków i pętli w projektach.",
+      "course": 13
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 74,
+    "fields": {
+      "name": "Projekt Końcowy",
+      "description": "Stworzenie własnego projektu z wykorzystaniem zdobytych umiejętności.",
+      "course": 13
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 75,
+    "fields": {
+      "name": "Projekt Gierki",
+      "description": "Pierwszy projekt gry w Scratch, w tym tworzenie postaci i ruchu.",
+      "course": 14
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 76,
+    "fields": {
+      "name": "Poziomy i Punkty",
+      "description": "Dodawanie poziomów i systemu punktacji do gry.",
+      "course": 14
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 77,
+    "fields": {
+      "name": "Efekty Specjalne",
+      "description": "Nauka dodawania efektów specjalnych i dźwięków do gier.",
+      "course": 14
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 78,
+    "fields": {
+      "name": "Twoja Własna Gra",
+      "description": "Tworzenie własnej gry komputerowej i udostępnianie jej innym użytkownikom Scratch.",
+      "course": 14
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 79,
+    "fields": {
+      "name": "Podstawy Animacji",
+      "description": "Rozpoczęcie nauki animacji, tworzenie pierwszych ruchomych postaci.",
+      "course": 15
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 80,
+    "fields": {
+      "name": "Scenariusze i Interakcje",
+      "description": "Tworzenie scenariuszy i interakcji między postaciami w animacjach.",
+      "course": 15
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 81,
+    "fields": {
+      "name": "Dźwięk i Efekty Wizualne",
+      "description": "Dodawanie dźwięku i efektów wizualnych do animacji.",
+      "course": 15
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 82,
+    "fields": {
+      "name": "Twój Film Animowany",
+      "description": "Stworzenie własnego filmu animowanego i podzielenie się nim z innymi.",
+      "course": 15
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 83,
+    "fields": {
+      "name": "Wprowadzenie do Dźwięku",
+      "description": "Ogólna prezentacja dźwięku i jego znaczenie w Scratch.",
+      "course": 16
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 84,
+    "fields": {
+      "name": "Tworzenie Melodii",
+      "description": "Nauka komponowania prostych melodii i dźwięków.",
+      "course": 16
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 85,
+    "fields": {
+      "name": "Efekty Dźwiękowe",
+      "description": "Dodawanie efektów dźwiękowych do projektów.",
+      "course": 16
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 86,
+    "fields": {
+      "name": "Twoja Własna Muzyka",
+      "description": "Stworzenie własnych utworów muzycznych i podzielenie się nimi z innymi użytkownikami.",
+      "course": 16
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 87,
+    "fields": {
+      "name": "Wprowadzenie do Figma",
+      "description": "Ogólny przegląd interfejsu Figma i jego funkcji.",
+      "course": 17
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 88,
+    "fields": {
+      "name": "Tworzenie Projektu",
+      "description": "Kroki niezbędne do utworzenia nowego projektu w Figma.",
+      "course": 17
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 89,
+    "fields": {
+      "name": "Rysowanie i Edycja",
+      "description": "Techniki rysowania i edycji elementów projektu w Figma.",
+      "course": 17
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 90,
+    "fields": {
+      "name": "Współpraca i Udostępnianie",
+      "description": "Jak współpracować z innymi użytkownikami i udostępniać projekty w Figma.",
+      "course": 17
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 91,
+    "fields": {
+      "name": "Projektowanie Stron Internetowych",
+      "description": "Podstawy projektowania responsywnych stron internetowych w Figma.",
+      "course": 18
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 92,
+    "fields": {
+      "name": "Tworzenie Komponentów",
+      "description": "Jak tworzyć i używać komponentów w projektach webowych.",
+      "course": 18
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 93,
+    "fields": {
+      "name": "Prototypowanie",
+      "description": "Tworzenie interaktywnych prototypów stron i aplikacji.",
+      "course": 18
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 94,
+    "fields": {
+      "name": "Testowanie i Opinie",
+      "description": "Jak testować projekty i zbierać opinie od użytkowników.",
+      "course": 18
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 95,
+    "fields": {
+      "name": "Rysowanie i Kształty",
+      "description": "Techniki rysowania i tworzenia kształtów w Figma.",
+      "course": 19
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 96,
+    "fields": {
+      "name": "Tworzenie Ikony",
+      "description": "Kroki niezbędne do stworzenia własnej ikony w Figma.",
+      "course": 19
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 97,
+    "fields": {
+      "name": "Ilustracje i Efekty",
+      "description": "Dodawanie efektów i tworzenie ilustracji przy użyciu Figma.",
+      "course": 19
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 98,
+    "fields": {
+      "name": "Eksportowanie Grafiki",
+      "description": "Jak eksportować gotową grafikę i ikony do różnych formatów.",
+      "course": 19
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 99,
+    "fields": {
+      "name": "Prototypowanie Interfejsów",
+      "description": "Podstawy tworzenia interaktywnych prototypów interfejsów użytkownika.",
+      "course": 20
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 100,
+    "fields": {
+      "name": "Dodawanie Interakcji",
+      "description": "Jak dodawać interakcje, takie jak przewijanie i przekształcenia.",
+      "course": 20
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 101,
+    "fields": {
+      "name": "Testowanie Prototypów",
+      "description": "Proces testowania i uzyskiwania opinii od użytkowników prototypów.",
+      "course": 20
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 102,
+    "fields": {
+      "name": "Dokumentacja Projektu",
+      "description": "Tworzenie dokumentacji projektu i udostępnianie jej zespołowi.",
+      "course": 20
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 103,
+    "fields": {
+      "name": "Wprowadzenie do Power Apps",
+      "description": "Ogólny przegląd narzędzia Power Apps i jego roli w tworzeniu aplikacji.",
+      "course": 21
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 104,
+    "fields": {
+      "name": "Tworzenie Pierwszej Aplikacji",
+      "description": "Kroki niezbędne do stworzenia pierwszej prostej aplikacji w Power Apps.",
+      "course": 21
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 105,
+    "fields": {
+      "name": "Interfejs Użytkownika",
+      "description": "Nauka projektowania intuicyjnego interfejsu użytkownika w aplikacjach.",
+      "course": 21
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 106,
+    "fields": {
+      "name": "Połączenie z Danymi",
+      "description": "Jak łączyć aplikacje z różnymi źródłami danych i bazami danych.",
+      "course": 21
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 107,
+    "fields": {
+      "name": "Projektowanie Formularzy",
+      "description": "Nauka projektowania interaktywnych formularzy w Power Apps.",
+      "course": 22
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 108,
+    "fields": {
+      "name": "Aplikacje Mobilne",
+      "description": "Tworzenie aplikacji mobilnych dostosowanych do różnych urządzeń.",
+      "course": 22
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 109,
+    "fields": {
+      "name": "Zarządzanie Danymi",
+      "description": "Jak efektywnie zarządzać danymi w aplikacjach Power Apps.",
+      "course": 22
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 110,
+    "fields": {
+      "name": "Testowanie i Publikacja",
+      "description": "Proces testowania i publikacji aplikacji mobilnych.",
+      "course": 22
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 111,
+    "fields": {
+      "name": "Workflowy Biznesowe",
+      "description": "Ogólna koncepcja i znaczenie workflowów biznesowych.",
+      "course": 23
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 112,
+    "fields": {
+      "name": "Projektowanie Workflowów",
+      "description": "Tworzenie workflowów i automatyzacja procesów biznesowych.",
+      "course": 23
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 113,
+    "fields": {
+      "name": "Integracja z Innymi Aplikacjami",
+      "description": "Jak integrować aplikacje Power Apps z innymi narzędziami i platformami.",
+      "course": 23
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 114,
+    "fields": {
+      "name": "Monitorowanie i Optymalizacja",
+      "description": "Monitorowanie i optymalizacja działania aplikacji workflow.",
+      "course": 23
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 115,
+    "fields": {
+      "name": "Rozwiązywanie Problemów Biznesowych",
+      "description": "Jak rozwiązywać konkretne problemy biznesowe za pomocą niestandardowych rozwiązań.",
+      "course": 24
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 116,
+    "fields": {
+      "name": "Tworzenie Niestandardowych Aplikacji",
+      "description": "Projektowanie i wdrażanie niestandardowych aplikacji dostosowanych do potrzeb firmowych.",
+      "course": 24
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 117,
+    "fields": {
+      "name": "Integracja i Rozszerzanie Funkcjonalności",
+      "description": "Jak integrować istniejące systemy i rozszerzać funkcjonalności aplikacji w Power Apps.",
+      "course": 24
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 118,
+    "fields": {
+      "name": "Wsparcie i Utrzymanie",
+      "description": "Proces wsparcia i utrzymania niestandardowych rozwiązań w organizacji.",
+      "course": 24
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 119,
+    "fields": {
+      "name": "Wprowadzenie do OutSystems",
+      "description": "Ogólny przegląd platformy OutSystems i jej znaczenia w tworzeniu aplikacji.",
+      "course": 25
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 120,
+    "fields": {
+      "name": "Tworzenie Pierwszej Aplikacji",
+      "description": "Kroki niezbędne do stworzenia pierwszej prostej aplikacji w OutSystems.",
+      "course": 25
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 121,
+    "fields": {
+      "name": "Projektowanie Interfejsu Użytkownika",
+      "description": "Nauka projektowania intuicyjnego interfejsu użytkownika w aplikacjach OutSystems.",
+      "course": 25
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 122,
+    "fields": {
+      "name": "Połączenie z Danymi",
+      "description": "Jak łączyć aplikacje OutSystems z różnymi źródłami danych.",
+      "course": 25
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 123,
+    "fields": {
+      "name": "Projektowanie Aplikacji Mobilnych",
+      "description": "Podstawy projektowania aplikacji mobilnych w OutSystems.",
+      "course": 26
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 124,
+    "fields": {
+      "name": "Tworzenie Interakcji",
+      "description": "Jak dodawać interakcje i funkcjonalności do aplikacji mobilnych.",
+      "course": 26
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 125,
+    "fields": {
+      "name": "Testowanie i Publikacja",
+      "description": "Proces testowania i publikacji aplikacji mobilnych w OutSystems.",
+      "course": 26
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 126,
+    "fields": {
+      "name": "Optymalizacja Wydajności",
+      "description": "Jak optymalizować wydajność aplikacji na różnych urządzeniach mobilnych.",
+      "course": 26
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 127,
+    "fields": {
+      "name": "Workflowy Biznesowe",
+      "description": "Ogólna koncepcja i znaczenie workflowów biznesowych.",
+      "course": 27
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 128,
+    "fields": {
+      "name": "Projektowanie Workflowów",
+      "description": "Tworzenie workflowów i automatyzacja procesów biznesowych.",
+      "course": 27
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 129,
+    "fields": {
+      "name": "Integracja z Innymi Systemami",
+      "description": "Jak integrować aplikacje OutSystems z innymi systemami i narzędziami.",
+      "course": 27
+    }
+  },
+  {
+    "model": "courses.programmepoint",
+    "pk": 130,
+    "fields": {
+      "name": "Monitorowanie i Utrzymanie",
+      "description": "Proces monitorowania i utrzymania działania workflowów w OutSystems.",
+      "course": 27
+    }
+  }
+]

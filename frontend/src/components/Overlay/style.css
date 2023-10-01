@@ -1,0 +1,19 @@
+.canvas-ovleray {
+    border: none;
+    cursor: url("brush.svg");
+}
+
+.color-picker-button 
+{
+    position: relative;
+}
+.color-picker {
+    position: absolute !important;
+    left: 0;
+    bottom: calc(100% + 5px)
+}
+.sketch-canvas{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
