@@ -39,7 +39,7 @@ export default function PortfolioAdd() {
 
     return (
         <div className="flex items-center justify-center h-full">
-            <form className="max-w-[500px] rounded-2xl bg-[#acacac]/[0.2] backdrop-blur-lg p-4 md:p-8 flex flex-col shadow-[0px_4px_16px_-1px_] gap-y-4 mt-5" onSubmit={onSubmit}>
+            <form className="max-w-[900px] min-w-[100%] rounded-2xl bg-[#acacac]/[0.2] backdrop-blur-lg p-4 md:p-8 flex flex-col shadow-[0px_4px_16px_-1px_] gap-y-4 mt-5" onSubmit={onSubmit}>
                 <label htmlFor={imageId} className="w-[200px] h-[200px] cursor-pointer text-white mx-auto">
                     {
                         image === "" ? (
@@ -55,9 +55,8 @@ export default function PortfolioAdd() {
                     }
                     <input type="file" id={imageId} className="hidden" onChange={e => setImage(URL.createObjectURL(e.target.files[0]))} />
                 </label>
-                <Input label="Tytuł" value={title} setValue={setTitle} />
-                <Input label="Description" value={description} setValue={setDescription} />
-                <Multiselect values={tags} setValues={setTags} options={tagOptions} />
+                <Input label="Nazwa projektu" value={title} setValue={setTitle} />
+                <Input label="Opis projektu" value={description} setValue={setDescription} />
                 <Input label="Link do demo" value={productionLink} setValue={setProuctionLink} />
                 <Button variant="contained" type="submit">Dodaj</Button>
             </form>
