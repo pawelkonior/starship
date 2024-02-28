@@ -15,7 +15,7 @@ function Layout() {
     return (
         <ThemeProvider theme={isDarkTheme ? createTheme(darkTheme) : createTheme(lightTheme)}>
             <CssBaseline>
-                <div className="w-full" style={{ minHeight: "100vh", height: 'auto' }} ref={containerRef}>
+                <div className="w-full h-full" style={{ minHeight: "100vh", height: 'auto', paddingBottom: "20px" }} ref={containerRef}>
                     <Navbar />
                     <ShadowOverlay targetComponent={containerRef} />
                     <Container className="w-full" >

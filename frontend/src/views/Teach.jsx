@@ -68,7 +68,7 @@ export default function Teach() {
             onSubmit={handleSubmit}>
             <TextField
                 fullWidth
-                label="Name"
+                label="Nazwa kursu"
                 variant="standard"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -77,7 +77,7 @@ export default function Teach() {
 
             <TextField
                 fullWidth
-                label="Description"
+                label="Opis"
                 variant="standard"
                 multiline
                 rows={4}
@@ -86,13 +86,13 @@ export default function Teach() {
                 className="white-border-bottom"
             />
 
-            <Typography variant="h6" style={{color: "white"}}>Programme Points</Typography>
+            <Typography variant="h6" style={{color: "white"}}>Agenda</Typography>
 
             {formData.programme_points.map((point, index) => (
                 <Box key={index} width="100%" mb={2} display="flex" alignItems="center" gap="10px">
                     <TextField
                         fullWidth
-                        label="Name"
+                        label="Pozycja"
                         variant="standard"
                         value={point.name}
                         onChange={(e) => {
@@ -104,7 +104,7 @@ export default function Teach() {
                     />
                     <TextField
                         fullWidth
-                        label="Description"
+                        label="Opis pozycji"
                         variant="standard"
                         value={point.description}
                         onChange={(e) => {
@@ -123,8 +123,7 @@ export default function Teach() {
                     </IconButton>
                 </Box>
             ))}
-            <Button startIcon={<AddIcon/>} variant="contained" color="primary" style={{width: '300px'}} onClick={handleAddProgrammePoint}>Add
-                Programme Point</Button>
+            <Button startIcon={<AddIcon/>} variant="contained" color="primary" style={{width: '300px'}} onClick={handleAddProgrammePoint}>Dodaj pozycje do agendy</Button>
 
             <Typography variant="h6" mt={3} style={{color: "white"}}>Tagi</Typography>
 
@@ -132,7 +131,7 @@ export default function Teach() {
                 <Box key={index} width="100%" mb={2} display="flex" alignItems="center" gap="10px">
                     <TextField
                         fullWidth
-                        label="Name"
+                        label="Nazwa taga"
                         variant="standard"
                         value={tag.name}
                         onChange={(e) => {
