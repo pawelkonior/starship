@@ -1,6 +1,6 @@
 import {atom, useAtom} from 'jotai'
-import useLocalStorage from "./useLocalStorage.js";
-import {useEffect} from "react";
+import useSessionStorage from "./useSessionStorage.js";
+import {useEffect, useState} from "react";
 
 export const tokenAtom = atom("")
 export const isAuthenticatedAtom = atom(false)
@@ -8,7 +8,8 @@ export const isAuthenticatedAtom = atom(false)
 export default function useAuth() {
     const [token, setToken_] = useAtom(tokenAtom)
     const [isAuthenticated, setIsAuthenticated] = useAtom(isAuthenticatedAtom)
-    const [storageToken, setStorageToken] = useLocalStorage("token", "");
+    const [storageToken, setStorageToken] = useSessionStorage("token", "");
+    const [isLoading, setIsLoading] = useState(true);
 
 
     function setToken(token) {
@@ -21,6 +22,8 @@ export default function useAuth() {
         if (storageToken !== "" && token === "") {
             setToken(storageToken)
         }
+        setIsLoading(false);
+
     }, []);
 
 
@@ -28,6 +31,7 @@ export default function useAuth() {
         token,
         setToken,
         isAuthenticated,
+        isLoading,
         setIsAuthenticated,
         logout: () => {
             setToken_("")

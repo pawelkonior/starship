@@ -14,14 +14,14 @@ import useAuth from "./hooks/useAuth.js";
 import { useEffect } from "react";
 
 function RequireLogin({ children }) {
-    const { isAuthenticated } = useAuth()
+    const { isAuthenticated, isLoading } = useAuth()
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (!isAuthenticated) navigate("/logowanie/")
-    }, [isAuthenticated, navigate])
+        if (!isAuthenticated && !isLoading) navigate("/logowanie/")
+    }, [isAuthenticated, navigate, isLoading])
 
-    return children
+    return isLoading || children
 }
 
 export const router = createBrowserRouter(
