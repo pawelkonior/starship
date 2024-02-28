@@ -9,6 +9,7 @@ function OpenWindow({handleIconClick, messages, setMessages, setInputClosed, inp
         <Box
             // css={openChatStyle}
             sx={{
+                zIndex: 99999,
                 width: "20rem",
                 height: "25rem",
                 backgroundColor: "rgb(250, 249, 249, 0.3)",

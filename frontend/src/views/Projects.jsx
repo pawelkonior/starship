@@ -16,7 +16,7 @@ export default function Projects() {
         "Najwyżej oceniane": projects,
     }
 
-    return <div className="flex flex-col gap-y-3 h-[calc(100%-50px)] overflow-y-scroll no-scrollbar py-4">
+    return <div className="flex flex-col gap-y-3  py-4">
         {Object.entries(projectCategories).map(([title, portfolioItems]) => (
             <CardRow key={title} title={title} portfolioItems={portfolioItems} />
         ))}
@@ -27,7 +27,7 @@ function CardRow({ title, portfolioItems }) {
 
     return (
         <div>
-            <h3 className="text-xl text-white">{title}</h3>
+            <h3 className="text-xl text-white mb-3">{title}</h3>
             <Swiper loop modules={[Navigation]} slidesPerView={3} centeredSlides className="w-full">
                 {portfolioItems.map(({ id, images, title, description, tags }) => {
                     return (
@@ -45,12 +45,12 @@ function CardRow({ title, portfolioItems }) {
 
 function Card({ images, title, description, tags }) {
     return (
-        <div className="flex flex-col w-[200px] md:w-[320px] h-[400px] gap-y-2 bg-[#011f26] rounded-lg text-white hover:scale-[102%] transition ease-in-out">
+        <div className="flex flex-col w-[200px] md:w-[360px] gap-y-2 bg-[#011f26] rounded-lg text-white hover:scale-[102%] transition ease-in-out">
             <img alt="preview" src={images.length ? images[0] : "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png"} className="rounded-t-lg max-h-[200px] object-cover" />
             <div className="flex flex-col px-3 py-2 gap-y-2 grow">
                 <h4 className="text-lg font-semibold">{title}</h4>
                 <p>{description}</p>
-                <div className="justify-center hidden pb-2 mt-auto overflow-wrap gap-x-2 md:flex">
+                <div className="justify-center hidden pb-2 mt-auto  gap-x-2 md:flex">
                     {tags.map(text => <Tag key={text} text={text} />)}
                 </div>
             </div>

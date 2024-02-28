@@ -38,7 +38,7 @@ function CoreWindow() {
     }
 
     return (
-        <Box>
+        <Box sx={{ zIndex: 9999, position: 'relative'}}>
             <DmIcon
 
                 w={50}
