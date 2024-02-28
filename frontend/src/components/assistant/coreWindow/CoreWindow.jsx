@@ -18,7 +18,7 @@ function CoreWindow() {
 
 
     useEffect(() => {
-        if(localStorage.getItem("isOpen") === 'true'){
+        if(!localStorage.getItem("isOpen") || localStorage.getItem("isOpen") === 'true'){
             setIsOpen(true);
         }
 
