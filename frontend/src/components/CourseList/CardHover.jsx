@@ -26,21 +26,21 @@ export function CardHover(props) {
         <div className="hoverWrapper">
             <Card
                 sx={styles.card}
-                style={{ backgroundColor: "#011F26", padding: "10px", cursor: "pointer" }}
+                style={{ backgroundColor: "#011F26", padding: "10px", cursor: "pointer", height: "100%", display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}
                 onClick={handleOpen}  // Open modal when mouse enters the card (you can change this as per your requirements)
             >
                 <CardMedia
                     component="img"
-                    style={{ height: 140 }}
+                    style={{ height: 140, width: '100%' }}
                     image={props.course.image}
                     alt={props.course.name}
                 />
-                <CardContent>
+                <CardContent style={{width: '100%'}}>
                     <Typography variant="body2">
                         {props.course.name}
                     </Typography>
                 </CardContent>
-                <CardActions disableSpacing sx={{ gap: 1 }}>
+                <CardActions disableSpacing sx={{ gap: 1, alignSelf: 'flex-end' }} style={{width: '100%'}}>
                     <Chip
                         label={(
                             <span>
