@@ -5,7 +5,7 @@ import OpenWindow from "../openWindow/openWindow.jsx";
 import WebSocket from "../ws/ws.jsx";
 
 function CoreWindow() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         {
             "owner": "bot",
@@ -18,6 +18,10 @@ function CoreWindow() {
 
 
     useEffect(() => {
+        if(localStorage.getItem("isOpen") === 'true'){
+            setIsOpen(true);
+        }
+
         WebSocket.onmessage = (e) => {
             setMessages((prev) => [...prev, {
                 message: e.data,
@@ -30,6 +34,7 @@ function CoreWindow() {
 
     function handleIconClick() {
         setIsOpen(!isOpen);
+        localStorage.setItem("isOpen", !isOpen);
     }
 
     return (
