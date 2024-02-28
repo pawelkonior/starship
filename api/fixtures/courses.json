@@ -1,0 +1,546 @@
+[
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "created_at": "2024-03-01T14:11:29.745Z",
+      "owner": 1,
+      "title": "Podstawy programowania w Pythonie",
+      "description": "Kurs wprowadzający do podstaw programowania, używając języka Python. Uczestnicy nauczą się podstaw składni, operacji na danych oraz podstawowych struktur danych.",
+      "duration": 40,
+      "course_date": "2024-03-11T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 10,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "created_at": "2024-03-01T14:15:24.123Z",
+      "owner": 2,
+      "title": "Rozwój aplikacji webowych w JavaScript",
+      "description": "Kurs skupiający się na tworzeniu interaktywnych aplikacji internetowych przy użyciu JavaScript, HTML i CSS. Uczestnicy nauczą się również korzystać z popularnych bibliotek i frameworków.",
+      "duration": 50,
+      "course_date": "2024-03-12T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 20,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "created_at": "2024-03-01T14:16:08.641Z",
+      "owner": 1,
+      "title": "Wprowadzenie do programowania w C++",
+      "description": "Kurs zaprojektowany, aby nauczyć uczestników podstaw programowania w C++, w tym zarządzania pamięcią, wskaźników i klas.",
+      "duration": 50,
+      "course_date": "2024-03-12T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 30,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "created_at": "2024-03-01T14:16:54.498Z",
+      "owner": 2,
+      "title": "Tworzenie aplikacji mobilnych na Androida",
+      "description": "Kurs nauczy tworzenia aplikacji na system Android, używając Kotlin i Android Studio. Uczestnicy zdobędą wiedzę na temat interfejsu użytkownika, obsługi danych i publikacji aplikacji.",
+      "duration": 40,
+      "course_date": "2024-03-14T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 40,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "created_at": "2024-03-01T14:18:22.577Z",
+      "owner": 7,
+      "title": "Podstawy budowy aplikacji no-code z wykorzystaniem Bubble",
+      "description": "Kurs wprowadza w świat tworzenia aplikacji bez pisania kodu za pomocą platformy Bubble. Uczestnicy nauczą się projektować, budować i uruchamiać aplikacje webowe.",
+      "duration": 30,
+      "course_date": "2024-03-11T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 50,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "created_at": "2024-03-01T14:19:28.128Z",
+      "owner": 2,
+      "title": "Tworzenie aplikacji biznesowych z Microsoft PowerApps",
+      "description": "Kurs kierowany do osób chcących szybko tworzyć aplikacje biznesowe z użyciem Microsoft PowerApps. Pokazuje, jak budować aplikacje, które integrują się z danymi firmy i usługami w chmurze.",
+      "duration": 50,
+      "course_date": "2024-03-20T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 60,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "created_at": "2024-03-01T14:20:13.716Z",
+      "owner": 7,
+      "title": "Automatyzacja procesów biznesowych z Zapier",
+      "description": "Kurs nauczy, jak używać Zapiera do automatyzacji codziennych zadań i procesów biznesowych, integrując różne aplikacje i usługi internetowe bez pisania kodu.",
+      "duration": 80,
+      "course_date": "2024-03-13T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 70,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "created_at": "2024-03-01T14:20:53.109Z",
+      "owner": 2,
+      "title": "Projektowanie stron internetowych z Wix",
+      "description": "Kurs zapewnia wiedzę na temat tworzenia profesjonalnie wyglądających stron internetowych bez kodowania, korzystając z platformy Wix. Pokrywa zarówno podstawy projektowania, jak i zaawansowane funkcje.",
+      "duration": 90,
+      "course_date": "2024-03-21T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 80,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "created_at": "2024-03-01T14:21:26.940Z",
+      "owner": 1,
+      "title": "Rozwój aplikacji mobilnych no-code z Adalo",
+      "description": "Kurs pokazuje, jak tworzyć aplikacje mobilne bez kodowania za pomocą Adalo. Uczestnicy nauczą się projektować, budować i publikować aplikacje na iOS i Android.",
+      "duration": 120,
+      "course_date": "2024-03-25T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 90,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 10,
+    "fields": {
+      "created_at": "2024-03-01T14:22:12.986Z",
+      "owner": 1,
+      "title": "Wprowadzenie do tworzenia chatbotów z Chatfuel",
+      "description": "Kurs oferuje wprowadzenie do tworzenia chatbotów za pomocą Chatfuel, platformy no-code. Uczestnicy nauczą się projektować i implementować chatboty dla Facebook Messenger.",
+      "duration": 120,
+      "course_date": "2024-03-18T15:30:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 100,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 11,
+    "fields": {
+      "created_at": "2024-03-01T14:23:02.067Z",
+      "owner": 7,
+      "title": "Tworzenie stron i aplikacji z WordPress",
+      "description": "Kurs skupia się na tworzeniu stron internetowych i prostych aplikacji z wykorzystaniem WordPressa i dodatków typu no-code. Uczestnicy nauczą się dostosowywać wygląd i funkcjonalność bez głębokiej wiedzy programistycznej.",
+      "duration": 120,
+      "course_date": "2024-03-18T14:00:00Z",
+      "is_active": true,
+      "is_accepted": true,
+      "price": 55,
+      "completed": false,
+      "image": "",
+      "agenda": "test",
+      "tags": [
+        8,
+        5
+      ]
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 1,
+    "fields": {
+      "course": 1,
+      "student": 6,
+      "enrollment_date": "2024-03-01T14:23:29.638Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 2,
+    "fields": {
+      "course": 1,
+      "student": 13,
+      "enrollment_date": "2024-03-01T14:23:58.533Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 3,
+    "fields": {
+      "course": 1,
+      "student": 8,
+      "enrollment_date": "2024-03-01T14:24:09.872Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 4,
+    "fields": {
+      "course": 2,
+      "student": 9,
+      "enrollment_date": "2024-03-01T14:24:18.641Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 5,
+    "fields": {
+      "course": 2,
+      "student": 4,
+      "enrollment_date": "2024-03-01T14:24:26.762Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 6,
+    "fields": {
+      "course": 2,
+      "student": 10,
+      "enrollment_date": "2024-03-01T14:25:01.698Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 7,
+    "fields": {
+      "course": 4,
+      "student": 13,
+      "enrollment_date": "2024-03-01T14:25:27.412Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 8,
+    "fields": {
+      "course": 4,
+      "student": 4,
+      "enrollment_date": "2024-03-01T14:25:38.916Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 9,
+    "fields": {
+      "course": 5,
+      "student": 15,
+      "enrollment_date": "2024-03-01T14:25:49.506Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 10,
+    "fields": {
+      "course": 5,
+      "student": 14,
+      "enrollment_date": "2024-03-01T14:25:57.129Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 1,
+    "fields": {
+      "name": "NoCode"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 2,
+    "fields": {
+      "name": "LowCode"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Wix"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Figma"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Łatwe"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 6,
+    "fields": {
+      "name": "JavaScript"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 7,
+    "fields": {
+      "name": "PowerApps"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 8,
+    "fields": {
+      "name": "WordPress"
+    }
+  },
+  {
+    "model": "courses.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Trudne"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.361Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.364Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 3,
+    "fields": {
+      "user": 4,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.365Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 4,
+    "fields": {
+      "user": 5,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.367Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 5,
+    "fields": {
+      "user": 6,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.368Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 6,
+    "fields": {
+      "user": 7,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.369Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 7,
+    "fields": {
+      "user": 8,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.370Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 8,
+    "fields": {
+      "user": 9,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.372Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 9,
+    "fields": {
+      "user": 10,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.373Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 10,
+    "fields": {
+      "user": 11,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.374Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 11,
+    "fields": {
+      "user": 12,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.376Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 12,
+    "fields": {
+      "user": 13,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.377Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 13,
+    "fields": {
+      "user": 14,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.378Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 14,
+    "fields": {
+      "user": 15,
+      "amount": 100,
+      "created_at": "2024-04-17T07:47:16.380Z",
+      "description": "Rejestracja"
+    }
+  },
+  {
+    "model": "courses.scorechange",
+    "pk": 15,
+    "fields": {
+      "user": 1,
+      "amount": 50,
+      "created_at": "2024-04-17T08:14:13.739Z",
+      "description": "Bonus za logowanie"
+    }
+  }
+]

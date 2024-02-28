@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chat package &mdash; Starship Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="courses package" href="courses.html" />
+    <link rel="prev" title="Welcome to Starship’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Starship
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">chat package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-chat.consumers">chat.consumers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chat.consumers.ChatBotConsumer"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.consumers.ChatBotConsumer.connect"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.consumers.ChatBotConsumer.disconnect"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.disconnect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.consumers.ChatBotConsumer.receive"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.receive()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-chat.events">chat.events module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chat.events.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.events.Event.chatbot_instance"><code class="docutils literal notranslate"><span class="pre">Event.chatbot_instance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.events.Event.message"><code class="docutils literal notranslate"><span class="pre">Event.message</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.events.EventHandler"><code class="docutils literal notranslate"><span class="pre">EventHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.events.EventHandler.handle_event"><code class="docutils literal notranslate"><span class="pre">EventHandler.handle_event()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.events.HistoryEvent"><code class="docutils literal notranslate"><span class="pre">HistoryEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.events.HistoryEvent.process"><code class="docutils literal notranslate"><span class="pre">HistoryEvent.process()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.events.MessageEvent"><code class="docutils literal notranslate"><span class="pre">MessageEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.events.MessageEvent.process"><code class="docutils literal notranslate"><span class="pre">MessageEvent.process()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-chat.helpers">chat.helpers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chat.helpers.OpenAIBot"><code class="docutils literal notranslate"><span class="pre">OpenAIBot</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.ask"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.ask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.change_role_description"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.change_role_description()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.get_conversation_history"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.get_conversation_history()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.get_last_response"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.get_last_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.reset_conversation"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.reset_conversation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.helpers.OpenAIBot.update_conversation_history"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.update_conversation_history()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-chat.messages">chat.messages module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chat.messages.AbstractMessage"><code class="docutils literal notranslate"><span class="pre">AbstractMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.AbstractMessage.message_text"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.message_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.AbstractMessage.message_type"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.message_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.AbstractMessage.sender"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.sender</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.messages.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.Message.from_json"><code class="docutils literal notranslate"><span class="pre">Message.from_json()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.Message.to_json"><code class="docutils literal notranslate"><span class="pre">Message.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.messages.MessageType"><code class="docutils literal notranslate"><span class="pre">MessageType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.MessageType.HISTORY"><code class="docutils literal notranslate"><span class="pre">MessageType.HISTORY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.MessageType.TEXT"><code class="docutils literal notranslate"><span class="pre">MessageType.TEXT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.messages.SenderTypes"><code class="docutils literal notranslate"><span class="pre">SenderTypes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.SenderTypes.BOT"><code class="docutils literal notranslate"><span class="pre">SenderTypes.BOT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chat.messages.SenderTypes.USER"><code class="docutils literal notranslate"><span class="pre">SenderTypes.USER</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-chat.middleware">chat.middleware module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chat.middleware.TokenAuthMiddleware"><code class="docutils literal notranslate"><span class="pre">TokenAuthMiddleware</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chat.middleware.get_user_from_token"><code class="docutils literal notranslate"><span class="pre">get_user_from_token()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="courses.html">courses package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_posts.html">job_posts package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolios.html">portfolios package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webrtc.html">webrtc package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram.html">Diagram</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Starship</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">chat package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/chat.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chat-package">
+<h1>chat package<a class="headerlink" href="#chat-package" title="Link to this heading"></a></h1>
+<section id="module-chat.consumers">
+<span id="chat-consumers-module"></span><h2>chat.consumers module<a class="headerlink" href="#module-chat.consumers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.consumers.ChatBotConsumer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.consumers.</span></span><span class="sig-name descname"><span class="pre">ChatBotConsumer</span></span><a class="headerlink" href="#chat.consumers.ChatBotConsumer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncWebsocketConsumer</span></code></p>
+<p>ChatBotConsumer class is a subclass of AsyncWebsocketConsumer. It handles WebSocket connections for chat bot functionality.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>event_handler (EventHandler): An instance of the EventHandler class used for handling chat bot events.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>connect(): Called when a WebSocket connection is established. Checks if the user is authenticated, and if not, closes the connection with a 401 UNAUTHORIZED status code. Otherwise, accepts the connection.</p></li>
+<li><p>disconnect(close_code): Called when a WebSocket connection is closed.</p></li>
+<li><p>receive(text_data): Called when a message is received from the WebSocket connection. Parses the received message as a Message object and passes it to the event_handler for processing. Sends back the outgoing message, if any, in JSON format.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.consumers.ChatBotConsumer.connect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chat.consumers.ChatBotConsumer.connect" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.consumers.ChatBotConsumer.disconnect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">close_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.consumers.ChatBotConsumer.disconnect" title="Link to this definition"></a></dt>
+<dd><p>Called when a WebSocket connection is closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.consumers.ChatBotConsumer.receive">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.consumers.ChatBotConsumer.receive" title="Link to this definition"></a></dt>
+<dd><p>Called with a decoded WebSocket frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chat.events">
+<span id="chat-events-module"></span><h2>chat.events module<a class="headerlink" href="#module-chat.events" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.events.Event">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.events.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#chat.events.Event" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Class representing an event in a chatbot system.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>message (AbstractMessage): The message associated with the event.</p></li>
+<li><p>chatbot_instance (OpenAIBot): The instance of the chatbot that generated the event.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.events.Event.chatbot_instance">
+<span class="sig-name descname"><span class="pre">chatbot_instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#chat.helpers.OpenAIBot" title="chat.helpers.OpenAIBot"><span class="pre">OpenAIBot</span></a></em><a class="headerlink" href="#chat.events.Event.chatbot_instance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.events.Event.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#chat.messages.AbstractMessage" title="chat.messages.AbstractMessage"><span class="pre">AbstractMessage</span></a></em><a class="headerlink" href="#chat.events.Event.message" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.events.EventHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.events.</span></span><span class="sig-name descname"><span class="pre">EventHandler</span></span><a class="headerlink" href="#chat.events.EventHandler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class responsible for handling events by processing messages.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__init__(self): Initializes the EventHandler object.</p></li>
+<li><p>handle_event(self, message) -&gt; Union[Message, None]: Handles the given message by processing it and returning the result.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.events.EventHandler.handle_event">
+<span class="sig-name descname"><span class="pre">handle_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#chat.events.EventHandler.handle_event" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.events.HistoryEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.events.</span></span><span class="sig-name descname"><span class="pre">HistoryEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chatbot_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#chat.helpers.OpenAIBot" title="chat.helpers.OpenAIBot"><span class="pre">OpenAIBot</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.events.HistoryEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chat.events.Event" title="chat.events.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
+<p>A class representing a history event in a chatbot conversation.</p>
+<p>This class inherits from the Event class and is used to update the conversation history in the chatbot’s OpenAIBot instance.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>_user_message (List[Message]): A list of Message objects representing the user’s messages.</p></li>
+<li><p>_open_ai_instance (OpenAIBot): An instance of the OpenAIBot class representing the chatbot.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>process: Process the history event by updating the conversation history in the OpenAIBot instance.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.events.HistoryEvent.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#chat.events.HistoryEvent.process" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.events.MessageEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.events.</span></span><span class="sig-name descname"><span class="pre">MessageEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chatbot_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#chat.helpers.OpenAIBot" title="chat.helpers.OpenAIBot"><span class="pre">OpenAIBot</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.events.MessageEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chat.events.Event" title="chat.events.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
+<p>Class: MessageEvent</p>
+<p>This class represents an event that handles a message received from a user and processes it using a chatbot instance.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>_incoming_message (Message): The incoming message object.</p></li>
+<li><p>_outgoing_message_text (str): The outgoing message text.</p></li>
+<li><p>_open_ai_instance (OpenAIBot): The chatbot instance.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__init__(self, message: Message, chatbot_instance: OpenAIBot): Initializes a new instance of the MessageEvent class.</p></li>
+<li><p>process(self) -&gt; Message: Processes the incoming message using the chatbot instance and returns the response message.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.events.MessageEvent.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#chat.messages.Message" title="chat.messages.Message"><span class="pre">Message</span></a></span></span><a class="headerlink" href="#chat.events.MessageEvent.process" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chat.helpers">
+<span id="chat-helpers-module"></span><h2>chat.helpers module<a class="headerlink" href="#module-chat.helpers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.helpers.</span></span><span class="sig-name descname"><span class="pre">OpenAIBot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_conversation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gpt-4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing an OpenAI chatbot.</p>
+<p>Methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>__init__(self, initial_conversation=None, model_engine=”gpt-4”): Initializes the OpenAIBot object.</dt><dd><ul>
+<li><p>initial_conversation (optional): A list of dictionaries representing the initial conversation history.</p></li>
+<li><p>model_engine (optional): The model engine to use for generating responses.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>update_conversation_history(self, query: str): Updates the conversation history with a user query.</dt><dd><ul>
+<li><p>query: The user query to append to the conversation history.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ask(self, query: str) -&gt; str: Sends a user query to the bot and returns the generated response.</dt><dd><ul>
+<li><p>query: The user query to send to the bot.</p></li>
+<li><p>Returns: The generated response from the bot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>change_role_description(self, new_description): Updates the role description of the bot.</dt><dd><ul>
+<li><p>new_description: The new role description for the bot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>get_conversation_history(self): Returns the conversation history.</dt><dd><ul>
+<li><p>Returns: A list of dictionaries representing the conversation history.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>get_last_response(self): Returns the last response generated by the bot.</dt><dd><ul>
+<li><p>Returns: The content of the last response, or None if no response has been generated.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>reset_conversation(self): Resets the conversation history to the initial state.</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.ask">
+<span class="sig-name descname"><span class="pre">ask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#chat.helpers.OpenAIBot.ask" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.change_role_description">
+<span class="sig-name descname"><span class="pre">change_role_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_description</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot.change_role_description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.get_conversation_history">
+<span class="sig-name descname"><span class="pre">get_conversation_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot.get_conversation_history" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.get_last_response">
+<span class="sig-name descname"><span class="pre">get_last_response</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot.get_last_response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.reset_conversation">
+<span class="sig-name descname"><span class="pre">reset_conversation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot.reset_conversation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.helpers.OpenAIBot.update_conversation_history">
+<span class="sig-name descname"><span class="pre">update_conversation_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.helpers.OpenAIBot.update_conversation_history" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chat.messages">
+<span id="chat-messages-module"></span><h2>chat.messages module<a class="headerlink" href="#module-chat.messages" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.messages.AbstractMessage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.messages.</span></span><span class="sig-name descname"><span class="pre">AbstractMessage</span></span><a class="headerlink" href="#chat.messages.AbstractMessage" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>AbstractMessage class is an abstract base class that represents a generic message.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>message_text (str): The content of the message.</p></li>
+<li><p>sender (str): The sender of the message.</p></li>
+<li><p>message_type (str): The type/category of the message.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.AbstractMessage.message_text">
+<span class="sig-name descname"><span class="pre">message_text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chat.messages.AbstractMessage.message_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.AbstractMessage.message_type">
+<span class="sig-name descname"><span class="pre">message_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chat.messages.AbstractMessage.message_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.AbstractMessage.sender">
+<span class="sig-name descname"><span class="pre">sender</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chat.messages.AbstractMessage.sender" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.messages.Message">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.messages.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.messages.Message" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chat.messages.AbstractMessage" title="chat.messages.AbstractMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMessage</span></code></a></p>
+<p>Message class represents a message object with text and sender information.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>message_text (str): The text of the message.</p></li>
+<li><p>sender (str): The sender of the message.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>to_json() -&gt; str:</dt><dd><p>Converts the message object to a JSON string.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>from_json(json_data):</dt><dd><p>Converts a JSON string to a Message object.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.messages.Message.from_json">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.messages.Message.from_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chat.messages.Message.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#chat.messages.Message.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.messages.MessageType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.messages.</span></span><span class="sig-name descname"><span class="pre">MessageType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.messages.MessageType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></p>
+<p>Class representing a type of message.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>TEXT (str): Represents a text message type.
+HISTORY (str): Represents a history message type.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.MessageType.HISTORY">
+<span class="sig-name descname"><span class="pre">HISTORY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HISTORY'</span></em><a class="headerlink" href="#chat.messages.MessageType.HISTORY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.MessageType.TEXT">
+<span class="sig-name descname"><span class="pre">TEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TEXT'</span></em><a class="headerlink" href="#chat.messages.MessageType.TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.messages.SenderTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.messages.</span></span><span class="sig-name descname"><span class="pre">SenderTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.messages.SenderTypes" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></p>
+<p>Enum class to represent different types of message senders.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>USER (str): Represents a message sender as a user.</p></li>
+<li><p>BOT (str): Represents a message sender as a bot.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.SenderTypes.BOT">
+<span class="sig-name descname"><span class="pre">BOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BOT'</span></em><a class="headerlink" href="#chat.messages.SenderTypes.BOT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chat.messages.SenderTypes.USER">
+<span class="sig-name descname"><span class="pre">USER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USER'</span></em><a class="headerlink" href="#chat.messages.SenderTypes.USER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chat.middleware">
+<span id="chat-middleware-module"></span><h2>chat.middleware module<a class="headerlink" href="#module-chat.middleware" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chat.middleware.TokenAuthMiddleware">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.middleware.</span></span><span class="sig-name descname"><span class="pre">TokenAuthMiddleware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.middleware.TokenAuthMiddleware" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A middleware class that performs token authentication before calling the application.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>app: The application to call after performing token authentication.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>__init__(self, app):</dt><dd><p>Initializes the TokenAuthMiddleware object.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>__call__(self, scope, receive, send):</dt><dd><p>Performs token authentication and calls the application.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chat.middleware.get_user_from_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chat.middleware.</span></span><span class="sig-name descname"><span class="pre">get_user_from_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chat.middleware.get_user_from_token" title="Link to this definition"></a></dt>
+<dd><p>Get the user from the provided token.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><ul class="simple">
+<li><p>user_id (int): The ID of the user.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>user (User): The user object associated with the provided user ID, if found.</p></li>
+<li><p>AnonymousUser: An instance of AnonymousUser if the user with the provided ID does not exist in the database.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Starship’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="courses.html" class="btn btn-neutral float-right" title="courses package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Azeno Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

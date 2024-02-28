@@ -1,0 +1,80 @@
+[
+  {
+    "model": "job_posts.company",
+    "pk": 1,
+    "fields": {
+      "company_name": "TechnoInnovate Solutions",
+      "company_address": "ul. Słoneczna 48, 00-789 Warszawa, Polska",
+      "phone_number": "+48 22 123 4567",
+      "website": "http://www.technoinnovatesolutions.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:01:40.843Z",
+      "updated_at": "2024-04-14T21:01:40.844Z"
+    }
+  },
+  {
+    "model": "job_posts.company",
+    "pk": 2,
+    "fields": {
+      "company_name": "GreenTech Innovations",
+      "company_address": "ul. Miodowa 23, 00-925 Warszawa, Polska",
+      "phone_number": "+48 22 654 3210",
+      "website": "http://www.greentechinnovations.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:10:00.123Z",
+      "updated_at": "2024-04-14T21:10:00.124Z"
+    }
+  },
+  {
+    "model": "job_posts.company",
+    "pk": 3,
+    "fields": {
+      "company_name": "Advanced Robotics",
+      "company_address": "ul. Ogrodowa 58, 61-001 Poznań, Polska",
+      "phone_number": "+48 61 987 6543",
+      "website": "http://www.advancedrobotics.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:15:30.567Z",
+      "updated_at": "2024-04-14T21:15:30.568Z"
+    }
+  },
+  {
+    "model": "job_posts.company",
+    "pk": 4,
+    "fields": {
+      "company_name": "EcoSolutions Tech",
+      "company_address": "ul. Długa 100, 80-034 Gdańsk, Polska",
+      "phone_number": "+48 58 765 4321",
+      "website": "http://www.ecosolutionstech.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:20:40.987Z",
+      "updated_at": "2024-04-14T21:20:40.988Z"
+    }
+  },
+  {
+    "model": "job_posts.company",
+    "pk": 5,
+    "fields": {
+      "company_name": "Quantum Computing Corp",
+      "company_address": "ul. Szeroka 27, 31-049 Kraków, Polska",
+      "phone_number": "+48 12 123 4568",
+      "website": "http://www.quantumcomputingcorp.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:25:50.654Z",
+      "updated_at": "2024-04-14T21:25:50.655Z"
+    }
+  },
+  {
+    "model": "job_posts.company",
+    "pk": 6,
+    "fields": {
+      "company_name": "FutureNet Solutions",
+      "company_address": "ul. Krótka 12, 53-345 Wrocław, Polska",
+      "phone_number": "+48 71 987 1234",
+      "website": "http://www.futurenetsolutions.pl",
+      "is_verified": true,
+      "created_at": "2024-04-14T21:30:30.321Z",
+      "updated_at": "2024-04-14T21:30:30.322Z"
+    }
+  }
+]

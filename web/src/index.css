@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(191, 240, 255);
+    background: linear-gradient(
+            90deg,
+            rgb(243, 249, 255) 0%,
+            rgb(152, 210, 253) 50%,
+            rgb(243, 249, 255) 100%
+    );
+}
+
+.control-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-next.control-arrow:before {
+    border-left: 13px solid #60bcff !important;
+}
+
+.control-prev.control-arrow:before {
+    border-right: 13px solid #60bcff !important;
+}

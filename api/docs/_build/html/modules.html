@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>app &mdash; Starship Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Starship
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">chat package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="courses.html">courses package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_posts.html">job_posts package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolios.html">portfolios package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webrtc.html">webrtc package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram.html">diagrams</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Starship</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">app</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="app">
+<h1>app<a class="headerlink" href="#app" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">chat package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chat.html#module-chat.consumers">chat.consumers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.consumers.ChatBotConsumer"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.consumers.ChatBotConsumer.connect"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.consumers.ChatBotConsumer.disconnect"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.disconnect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.consumers.ChatBotConsumer.receive"><code class="docutils literal notranslate"><span class="pre">ChatBotConsumer.receive()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chat.html#module-chat.events">chat.events module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.events.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.events.Event.chatbot_instance"><code class="docutils literal notranslate"><span class="pre">Event.chatbot_instance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.events.Event.message"><code class="docutils literal notranslate"><span class="pre">Event.message</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.events.EventHandler"><code class="docutils literal notranslate"><span class="pre">EventHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.events.EventHandler.handle_event"><code class="docutils literal notranslate"><span class="pre">EventHandler.handle_event()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.events.HistoryEvent"><code class="docutils literal notranslate"><span class="pre">HistoryEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.events.HistoryEvent.process"><code class="docutils literal notranslate"><span class="pre">HistoryEvent.process()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.events.MessageEvent"><code class="docutils literal notranslate"><span class="pre">MessageEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.events.MessageEvent.process"><code class="docutils literal notranslate"><span class="pre">MessageEvent.process()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chat.html#module-chat.helpers">chat.helpers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot"><code class="docutils literal notranslate"><span class="pre">OpenAIBot</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.ask"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.ask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.change_role_description"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.change_role_description()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.get_conversation_history"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.get_conversation_history()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.get_last_response"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.get_last_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.reset_conversation"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.reset_conversation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.helpers.OpenAIBot.update_conversation_history"><code class="docutils literal notranslate"><span class="pre">OpenAIBot.update_conversation_history()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chat.html#module-chat.messages">chat.messages module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.messages.AbstractMessage"><code class="docutils literal notranslate"><span class="pre">AbstractMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.AbstractMessage.message_text"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.message_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.AbstractMessage.message_type"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.message_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.AbstractMessage.sender"><code class="docutils literal notranslate"><span class="pre">AbstractMessage.sender</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.messages.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.Message.from_json"><code class="docutils literal notranslate"><span class="pre">Message.from_json()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.Message.to_json"><code class="docutils literal notranslate"><span class="pre">Message.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.messages.MessageType"><code class="docutils literal notranslate"><span class="pre">MessageType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.MessageType.HISTORY"><code class="docutils literal notranslate"><span class="pre">MessageType.HISTORY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.MessageType.TEXT"><code class="docutils literal notranslate"><span class="pre">MessageType.TEXT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.messages.SenderTypes"><code class="docutils literal notranslate"><span class="pre">SenderTypes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.SenderTypes.BOT"><code class="docutils literal notranslate"><span class="pre">SenderTypes.BOT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chat.html#chat.messages.SenderTypes.USER"><code class="docutils literal notranslate"><span class="pre">SenderTypes.USER</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chat.html#module-chat.middleware">chat.middleware module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.middleware.TokenAuthMiddleware"><code class="docutils literal notranslate"><span class="pre">TokenAuthMiddleware</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html#chat.middleware.get_user_from_token"><code class="docutils literal notranslate"><span class="pre">get_user_from_token()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="courses.html">courses package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.filters">courses.filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.filters.CourseFilter"><code class="docutils literal notranslate"><span class="pre">CourseFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.filters.CourseFilter.Meta"><code class="docutils literal notranslate"><span class="pre">CourseFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.filters.CourseFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">CourseFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.filters.CourseFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">CourseFilter.declared_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.filters.CourseFilter.filter_full_name"><code class="docutils literal notranslate"><span class="pre">CourseFilter.filter_full_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.filters.CourseFilter.filter_upcoming"><code class="docutils literal notranslate"><span class="pre">CourseFilter.filter_upcoming()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.models">courses.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.models.Course"><code class="docutils literal notranslate"><span class="pre">Course</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.COURSE_LEVEL_CHOICES"><code class="docutils literal notranslate"><span class="pre">Course.COURSE_LEVEL_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Course.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Course.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.agenda"><code class="docutils literal notranslate"><span class="pre">Course.agenda</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.completed"><code class="docutils literal notranslate"><span class="pre">Course.completed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.course_date"><code class="docutils literal notranslate"><span class="pre">Course.course_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.coursereview_set"><code class="docutils literal notranslate"><span class="pre">Course.coursereview_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.created_at"><code class="docutils literal notranslate"><span class="pre">Course.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.description"><code class="docutils literal notranslate"><span class="pre">Course.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.duration"><code class="docutils literal notranslate"><span class="pre">Course.duration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.enrollments"><code class="docutils literal notranslate"><span class="pre">Course.enrollments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.get_level_display"><code class="docutils literal notranslate"><span class="pre">Course.get_level_display()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">Course.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">Course.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.id"><code class="docutils literal notranslate"><span class="pre">Course.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.image"><code class="docutils literal notranslate"><span class="pre">Course.image</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.is_accepted"><code class="docutils literal notranslate"><span class="pre">Course.is_accepted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.is_active"><code class="docutils literal notranslate"><span class="pre">Course.is_active</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.level"><code class="docutils literal notranslate"><span class="pre">Course.level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.link"><code class="docutils literal notranslate"><span class="pre">Course.link</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.objects"><code class="docutils literal notranslate"><span class="pre">Course.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.owner"><code class="docutils literal notranslate"><span class="pre">Course.owner</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.owner_id"><code class="docutils literal notranslate"><span class="pre">Course.owner_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.price"><code class="docutils literal notranslate"><span class="pre">Course.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.tags"><code class="docutils literal notranslate"><span class="pre">Course.tags</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Course.title"><code class="docutils literal notranslate"><span class="pre">Course.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.models.CourseReview"><code class="docutils literal notranslate"><span class="pre">CourseReview</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">CourseReview.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">CourseReview.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.course"><code class="docutils literal notranslate"><span class="pre">CourseReview.course</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.course_id"><code class="docutils literal notranslate"><span class="pre">CourseReview.course_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.description"><code class="docutils literal notranslate"><span class="pre">CourseReview.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.id"><code class="docutils literal notranslate"><span class="pre">CourseReview.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.note"><code class="docutils literal notranslate"><span class="pre">CourseReview.note</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.objects"><code class="docutils literal notranslate"><span class="pre">CourseReview.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.user"><code class="docutils literal notranslate"><span class="pre">CourseReview.user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.CourseReview.user_id"><code class="docutils literal notranslate"><span class="pre">CourseReview.user_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.models.Enrollment"><code class="docutils literal notranslate"><span class="pre">Enrollment</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Enrollment.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Enrollment.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.course"><code class="docutils literal notranslate"><span class="pre">Enrollment.course</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.course_id"><code class="docutils literal notranslate"><span class="pre">Enrollment.course_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.enrollment_date"><code class="docutils literal notranslate"><span class="pre">Enrollment.enrollment_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.get_next_by_enrollment_date"><code class="docutils literal notranslate"><span class="pre">Enrollment.get_next_by_enrollment_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.get_previous_by_enrollment_date"><code class="docutils literal notranslate"><span class="pre">Enrollment.get_previous_by_enrollment_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.id"><code class="docutils literal notranslate"><span class="pre">Enrollment.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.is_active"><code class="docutils literal notranslate"><span class="pre">Enrollment.is_active</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.objects"><code class="docutils literal notranslate"><span class="pre">Enrollment.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.student"><code class="docutils literal notranslate"><span class="pre">Enrollment.student</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Enrollment.student_id"><code class="docutils literal notranslate"><span class="pre">Enrollment.student_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.models.ScoreChange"><code class="docutils literal notranslate"><span class="pre">ScoreChange</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">ScoreChange.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">ScoreChange.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.amount"><code class="docutils literal notranslate"><span class="pre">ScoreChange.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.created_at"><code class="docutils literal notranslate"><span class="pre">ScoreChange.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.description"><code class="docutils literal notranslate"><span class="pre">ScoreChange.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">ScoreChange.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">ScoreChange.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.id"><code class="docutils literal notranslate"><span class="pre">ScoreChange.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.objects"><code class="docutils literal notranslate"><span class="pre">ScoreChange.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.user"><code class="docutils literal notranslate"><span class="pre">ScoreChange.user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.ScoreChange.user_id"><code class="docutils literal notranslate"><span class="pre">ScoreChange.user_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.models.Tag"><code class="docutils literal notranslate"><span class="pre">Tag</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Tag.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Tag.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.course_set"><code class="docutils literal notranslate"><span class="pre">Tag.course_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.id"><code class="docutils literal notranslate"><span class="pre">Tag.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.name"><code class="docutils literal notranslate"><span class="pre">Tag.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.objects"><code class="docutils literal notranslate"><span class="pre">Tag.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.models.Tag.project_set"><code class="docutils literal notranslate"><span class="pre">Tag.project_set</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.permissions">courses.permissions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.permissions.IsOwnerOrReadOnly"><code class="docutils literal notranslate"><span class="pre">IsOwnerOrReadOnly</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.permissions.IsOwnerOrReadOnly.has_object_permission"><code class="docutils literal notranslate"><span class="pre">IsOwnerOrReadOnly.has_object_permission()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.permissions.ParticipatedInCourse"><code class="docutils literal notranslate"><span class="pre">ParticipatedInCourse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.permissions.ParticipatedInCourse.has_object_permission"><code class="docutils literal notranslate"><span class="pre">ParticipatedInCourse.has_object_permission()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.permissions.ParticipatedInCourse.message"><code class="docutils literal notranslate"><span class="pre">ParticipatedInCourse.message</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.serializers">courses.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.CourseCreateSerializer"><code class="docutils literal notranslate"><span class="pre">CourseCreateSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseCreateSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CourseCreateSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseCreateSerializer.create"><code class="docutils literal notranslate"><span class="pre">CourseCreateSerializer.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseCreateSerializer.get_tags"><code class="docutils literal notranslate"><span class="pre">CourseCreateSerializer.get_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseCreateSerializer.validate_tags"><code class="docutils literal notranslate"><span class="pre">CourseCreateSerializer.validate_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.get_is_attendee"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.get_is_attendee()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.get_is_mine"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.get_is_mine()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.get_students"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.get_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.get_tutor_rating"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.get_tutor_rating()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.get_tutor_rating_count"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.get_tutor_rating_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseDetailSerializer.update"><code class="docutils literal notranslate"><span class="pre">CourseDetailSerializer.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.CourseListSerializer"><code class="docutils literal notranslate"><span class="pre">CourseListSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseListSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CourseListSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseListSerializer.get_is_attendee"><code class="docutils literal notranslate"><span class="pre">CourseListSerializer.get_is_attendee()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseListSerializer.get_is_mine"><code class="docutils literal notranslate"><span class="pre">CourseListSerializer.get_is_mine()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseListSerializer.get_students_count"><code class="docutils literal notranslate"><span class="pre">CourseListSerializer.get_students_count()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.CourseSerializer"><code class="docutils literal notranslate"><span class="pre">CourseSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CourseSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.CourseSerializer.create"><code class="docutils literal notranslate"><span class="pre">CourseSerializer.create()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.EnrollmentSerializer"><code class="docutils literal notranslate"><span class="pre">EnrollmentSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.EnrollmentSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">EnrollmentSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.ReviewSerializer"><code class="docutils literal notranslate"><span class="pre">ReviewSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.ReviewSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ReviewSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.serializers.TagSerializer"><code class="docutils literal notranslate"><span class="pre">TagSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.TagSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">TagSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.TagSerializer.to_internal_value"><code class="docutils literal notranslate"><span class="pre">TagSerializer.to_internal_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.serializers.TagSerializer.to_representation"><code class="docutils literal notranslate"><span class="pre">TagSerializer.to_representation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.signals">courses.signals module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.signals.create_score_for_new_user"><code class="docutils literal notranslate"><span class="pre">create_score_for_new_user()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.signals.update_user_score"><code class="docutils literal notranslate"><span class="pre">update_user_score()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="courses.html#module-courses.viewsets">courses.viewsets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet"><code class="docutils literal notranslate"><span class="pre">CourseViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.destroy"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.destroy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.filterset_class"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.get_permissions"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.get_permissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.get_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.get_serializer_class"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.get_serializer_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.manage_enrollments"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.manage_enrollments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.ordering"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.ordering</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.ordering_fields"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.ordering_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.parser_classes"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.parser_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.perform_create"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.perform_create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.queryset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.retrieve"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.retrieve()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.review_course"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.review_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="courses.html#courses.viewsets.CourseViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CourseViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="job_posts.html">job_posts package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="job_posts.html#module-job_posts.filters">job_posts.filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.filters.CompanyFilter"><code class="docutils literal notranslate"><span class="pre">CompanyFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.CompanyFilter.Meta"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.CompanyFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.CompanyFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.declared_filters</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.filters.JobPostFilter"><code class="docutils literal notranslate"><span class="pre">JobPostFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.JobPostFilter.Meta"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.JobPostFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.JobPostFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.declared_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.filters.JobPostFilter.filter_full_name"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.filter_full_name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="job_posts.html#module-job_posts.models">job_posts.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.models.Company"><code class="docutils literal notranslate"><span class="pre">Company</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Company.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Company.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.company_address"><code class="docutils literal notranslate"><span class="pre">Company.company_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.company_name"><code class="docutils literal notranslate"><span class="pre">Company.company_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.company_posts"><code class="docutils literal notranslate"><span class="pre">Company.company_posts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.created_at"><code class="docutils literal notranslate"><span class="pre">Company.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">Company.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.get_next_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Company.get_next_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">Company.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.get_previous_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Company.get_previous_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.id"><code class="docutils literal notranslate"><span class="pre">Company.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.is_verified"><code class="docutils literal notranslate"><span class="pre">Company.is_verified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.objects"><code class="docutils literal notranslate"><span class="pre">Company.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.phone_number"><code class="docutils literal notranslate"><span class="pre">Company.phone_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.updated_at"><code class="docutils literal notranslate"><span class="pre">Company.updated_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.Company.website"><code class="docutils literal notranslate"><span class="pre">Company.website</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost"><code class="docutils literal notranslate"><span class="pre">JobPost</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">JobPost.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">JobPost.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.company"><code class="docutils literal notranslate"><span class="pre">JobPost.company</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.company_id"><code class="docutils literal notranslate"><span class="pre">JobPost.company_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.description"><code class="docutils literal notranslate"><span class="pre">JobPost.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.employment_type"><code class="docutils literal notranslate"><span class="pre">JobPost.employment_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.experience"><code class="docutils literal notranslate"><span class="pre">JobPost.experience</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.expiration_date"><code class="docutils literal notranslate"><span class="pre">JobPost.expiration_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.get_next_by_posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.get_next_by_posting_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.get_previous_by_posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.get_previous_by_posting_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.id"><code class="docutils literal notranslate"><span class="pre">JobPost.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.location"><code class="docutils literal notranslate"><span class="pre">JobPost.location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.objects"><code class="docutils literal notranslate"><span class="pre">JobPost.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.position"><code class="docutils literal notranslate"><span class="pre">JobPost.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.posting_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.salary_high"><code class="docutils literal notranslate"><span class="pre">JobPost.salary_high</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.salary_low"><code class="docutils literal notranslate"><span class="pre">JobPost.salary_low</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.models.JobPost.title"><code class="docutils literal notranslate"><span class="pre">JobPost.title</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="job_posts.html#module-job_posts.serializers">job_posts.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.serializers.CompanySerializer"><code class="docutils literal notranslate"><span class="pre">CompanySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.serializers.CompanySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CompanySerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.serializers.JobPostSerializer"><code class="docutils literal notranslate"><span class="pre">JobPostSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.serializers.JobPostSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">JobPostSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="job_posts.html#module-job_posts.viewsets">job_posts.viewsets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.filterset_class"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.list_company_job_posts"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.list_company_job_posts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.queryset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.CompanyViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet.filterset_class"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.queryset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="job_posts.html#job_posts.viewsets.JobPostViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="portfolios.html">portfolios package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="portfolios.html#module-portfolios.models">portfolios.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.models.Project"><code class="docutils literal notranslate"><span class="pre">Project</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Project.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Project.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.description"><code class="docutils literal notranslate"><span class="pre">Project.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.id"><code class="docutils literal notranslate"><span class="pre">Project.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.images"><code class="docutils literal notranslate"><span class="pre">Project.images</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.live_version_link"><code class="docutils literal notranslate"><span class="pre">Project.live_version_link</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.objects"><code class="docutils literal notranslate"><span class="pre">Project.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.owner"><code class="docutils literal notranslate"><span class="pre">Project.owner</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.owner_id"><code class="docutils literal notranslate"><span class="pre">Project.owner_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.source_code_link"><code class="docutils literal notranslate"><span class="pre">Project.source_code_link</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.tags"><code class="docutils literal notranslate"><span class="pre">Project.tags</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.Project.title"><code class="docutils literal notranslate"><span class="pre">Project.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage"><code class="docutils literal notranslate"><span class="pre">ProjectImage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">ProjectImage.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">ProjectImage.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.id"><code class="docutils literal notranslate"><span class="pre">ProjectImage.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.image"><code class="docutils literal notranslate"><span class="pre">ProjectImage.image</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.objects"><code class="docutils literal notranslate"><span class="pre">ProjectImage.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.project"><code class="docutils literal notranslate"><span class="pre">ProjectImage.project</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.models.ProjectImage.project_id"><code class="docutils literal notranslate"><span class="pre">ProjectImage.project_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="portfolios.html#module-portfolios.serializers">portfolios.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.serializers.ListProjectSerializer"><code class="docutils literal notranslate"><span class="pre">ListProjectSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.serializers.ListProjectSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ListProjectSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectImageSerializer"><code class="docutils literal notranslate"><span class="pre">ProjectImageSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectImageSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ProjectImageSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectSerializer"><code class="docutils literal notranslate"><span class="pre">ProjectSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ProjectSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectSerializer.create"><code class="docutils literal notranslate"><span class="pre">ProjectSerializer.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.serializers.ProjectSerializer.update"><code class="docutils literal notranslate"><span class="pre">ProjectSerializer.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="portfolios.html#module-portfolios.viewsets">portfolios.viewsets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.get_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.get_serializer_class"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.get_serializer_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.list"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.parser_classes"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.parser_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.perform_create"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.perform_create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="portfolios.html#portfolios.viewsets.ProjectViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">ProjectViewSet.permission_classes</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="users.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.serializers.html">users.serializers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#module-users.serializers.password_serializer">users.serializers.password_serializer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#module-users.serializers.register_serializer">users.serializers.register_serializer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#module-users.serializers.token_serializers">users.serializers.token_serializers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#module-users.serializers.user_serializer">users.serializers.user_serializer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.serializers.html#module-users.serializers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.exceptions">users.exceptions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.exceptions.AlreadyActive"><code class="docutils literal notranslate"><span class="pre">AlreadyActive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.exceptions.InvalidActivationToken"><code class="docutils literal notranslate"><span class="pre">InvalidActivationToken</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.exceptions.InvalidUserID"><code class="docutils literal notranslate"><span class="pre">InvalidUserID</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.models">users.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.models.CustomUser"><code class="docutils literal notranslate"><span class="pre">CustomUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">CustomUser.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">CustomUser.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.REQUIRED_FIELDS"><code class="docutils literal notranslate"><span class="pre">CustomUser.REQUIRED_FIELDS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.USERNAME_FIELD"><code class="docutils literal notranslate"><span class="pre">CustomUser.USERNAME_FIELD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.avatar"><code class="docutils literal notranslate"><span class="pre">CustomUser.avatar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.bio"><code class="docutils literal notranslate"><span class="pre">CustomUser.bio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.coursereview_set"><code class="docutils literal notranslate"><span class="pre">CustomUser.coursereview_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.courses"><code class="docutils literal notranslate"><span class="pre">CustomUser.courses</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.date_joined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.email"><code class="docutils literal notranslate"><span class="pre">CustomUser.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.enrollments"><code class="docutils literal notranslate"><span class="pre">CustomUser.enrollments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.first_name"><code class="docutils literal notranslate"><span class="pre">CustomUser.first_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.get_next_by_date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.get_next_by_date_joined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.get_previous_by_date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.get_previous_by_date_joined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.groups"><code class="docutils literal notranslate"><span class="pre">CustomUser.groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.id"><code class="docutils literal notranslate"><span class="pre">CustomUser.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.is_active"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_active</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.is_staff"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_staff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.is_superuser"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_superuser</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.last_login"><code class="docutils literal notranslate"><span class="pre">CustomUser.last_login</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.last_name"><code class="docutils literal notranslate"><span class="pre">CustomUser.last_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.logentry_set"><code class="docutils literal notranslate"><span class="pre">CustomUser.logentry_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.password"><code class="docutils literal notranslate"><span class="pre">CustomUser.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.projects"><code class="docutils literal notranslate"><span class="pre">CustomUser.projects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.save"><code class="docutils literal notranslate"><span class="pre">CustomUser.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.score"><code class="docutils literal notranslate"><span class="pre">CustomUser.score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.score_changes"><code class="docutils literal notranslate"><span class="pre">CustomUser.score_changes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.user_permissions"><code class="docutils literal notranslate"><span class="pre">CustomUser.user_permissions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.models.CustomUser.username"><code class="docutils literal notranslate"><span class="pre">CustomUser.username</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.permissions">users.permissions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.permissions.IsAdminUserOrIsStaff"><code class="docutils literal notranslate"><span class="pre">IsAdminUserOrIsStaff</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.permissions.IsAdminUserOrIsStaff.has_permission"><code class="docutils literal notranslate"><span class="pre">IsAdminUserOrIsStaff.has_permission()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.permissions.IsUserOrAdminUser"><code class="docutils literal notranslate"><span class="pre">IsUserOrAdminUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.permissions.IsUserOrAdminUser.has_object_permission"><code class="docutils literal notranslate"><span class="pre">IsUserOrAdminUser.has_object_permission()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.utils">users.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.utils.AccountActivationTokenGenerator"><code class="docutils literal notranslate"><span class="pre">AccountActivationTokenGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.utils.generate_activation_link"><code class="docutils literal notranslate"><span class="pre">generate_activation_link()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.utils.get_base_url"><code class="docutils literal notranslate"><span class="pre">get_base_url()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.utils.send_confirmation_email"><code class="docutils literal notranslate"><span class="pre">send_confirmation_email()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.utils.send_password_reset_email"><code class="docutils literal notranslate"><span class="pre">send_password_reset_email()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.views">users.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.views.AccountActivationView"><code class="docutils literal notranslate"><span class="pre">AccountActivationView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.AccountActivationView.get"><code class="docutils literal notranslate"><span class="pre">AccountActivationView.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.AccountActivationView.permission_classes"><code class="docutils literal notranslate"><span class="pre">AccountActivationView.permission_classes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.views.ChangePasswordView"><code class="docutils literal notranslate"><span class="pre">ChangePasswordView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.ChangePasswordView.authentication_classes"><code class="docutils literal notranslate"><span class="pre">ChangePasswordView.authentication_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.ChangePasswordView.patch"><code class="docutils literal notranslate"><span class="pre">ChangePasswordView.patch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.ChangePasswordView.permission_classes"><code class="docutils literal notranslate"><span class="pre">ChangePasswordView.permission_classes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.views.PasswordResetConfirmView"><code class="docutils literal notranslate"><span class="pre">PasswordResetConfirmView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.PasswordResetConfirmView.permission_classes"><code class="docutils literal notranslate"><span class="pre">PasswordResetConfirmView.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.PasswordResetConfirmView.post"><code class="docutils literal notranslate"><span class="pre">PasswordResetConfirmView.post()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.views.PasswordResetRequestView"><code class="docutils literal notranslate"><span class="pre">PasswordResetRequestView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.PasswordResetRequestView.permission_classes"><code class="docutils literal notranslate"><span class="pre">PasswordResetRequestView.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.views.PasswordResetRequestView.post"><code class="docutils literal notranslate"><span class="pre">PasswordResetRequestView.post()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users.viewsets">users.viewsets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="users.html#users.viewsets.UserViewSet"><code class="docutils literal notranslate"><span class="pre">UserViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.create"><code class="docutils literal notranslate"><span class="pre">UserViewSet.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.get_permissions"><code class="docutils literal notranslate"><span class="pre">UserViewSet.get_permissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">UserViewSet.get_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.get_serializer_class"><code class="docutils literal notranslate"><span class="pre">UserViewSet.get_serializer_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list_all_user_companies"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list_all_user_companies()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list_all_user_projects"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list_all_user_projects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list_all_users_job_posts"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list_all_users_job_posts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list_enrolled_courses"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list_enrolled_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.list_user_courses"><code class="docutils literal notranslate"><span class="pre">UserViewSet.list_user_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.parser_classes"><code class="docutils literal notranslate"><span class="pre">UserViewSet.parser_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="users.html#users.viewsets.UserViewSet.user_profile"><code class="docutils literal notranslate"><span class="pre">UserViewSet.user_profile()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="webrtc.html">webrtc package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webrtc.html#module-webrtc.connections">webrtc.connections module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webrtc.html#webrtc.connections.ConnectionHandler"><code class="docutils literal notranslate"><span class="pre">ConnectionHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.connections.ConnectionHandler.add_peoples_to_connect"><code class="docutils literal notranslate"><span class="pre">ConnectionHandler.add_peoples_to_connect()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webrtc.html#module-webrtc.consumers">webrtc.consumers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer.connect"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer.disconnect"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer.disconnect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer.event_create"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer.event_create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer.massage_to_user"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer.massage_to_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webrtc.html#webrtc.consumers.WebRtcConsumer.receive"><code class="docutils literal notranslate"><span class="pre">WebRtcConsumer.receive()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webrtc.html#module-webrtc">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Azeno Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

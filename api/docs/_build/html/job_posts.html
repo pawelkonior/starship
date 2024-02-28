@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>job_posts package &mdash; Starship Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="portfolios package" href="portfolios.html" />
+    <link rel="prev" title="courses package" href="courses.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Starship
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chat.html">chat package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="courses.html">courses package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">job_posts package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-job_posts.filters">job_posts.filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.filters.CompanyFilter"><code class="docutils literal notranslate"><span class="pre">CompanyFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.CompanyFilter.Meta"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.CompanyFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.CompanyFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">CompanyFilter.declared_filters</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.filters.JobPostFilter"><code class="docutils literal notranslate"><span class="pre">JobPostFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.JobPostFilter.Meta"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.JobPostFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.JobPostFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.declared_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.filters.JobPostFilter.filter_full_name"><code class="docutils literal notranslate"><span class="pre">JobPostFilter.filter_full_name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-job_posts.models">job_posts.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.models.Company"><code class="docutils literal notranslate"><span class="pre">Company</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Company.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Company.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.company_address"><code class="docutils literal notranslate"><span class="pre">Company.company_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.company_name"><code class="docutils literal notranslate"><span class="pre">Company.company_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.company_posts"><code class="docutils literal notranslate"><span class="pre">Company.company_posts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.created_at"><code class="docutils literal notranslate"><span class="pre">Company.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">Company.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.get_next_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Company.get_next_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">Company.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.get_previous_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Company.get_previous_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.id"><code class="docutils literal notranslate"><span class="pre">Company.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.is_verified"><code class="docutils literal notranslate"><span class="pre">Company.is_verified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.objects"><code class="docutils literal notranslate"><span class="pre">Company.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.phone_number"><code class="docutils literal notranslate"><span class="pre">Company.phone_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.updated_at"><code class="docutils literal notranslate"><span class="pre">Company.updated_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.Company.website"><code class="docutils literal notranslate"><span class="pre">Company.website</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.models.JobPost"><code class="docutils literal notranslate"><span class="pre">JobPost</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">JobPost.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">JobPost.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.company"><code class="docutils literal notranslate"><span class="pre">JobPost.company</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.company_id"><code class="docutils literal notranslate"><span class="pre">JobPost.company_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.description"><code class="docutils literal notranslate"><span class="pre">JobPost.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.employment_type"><code class="docutils literal notranslate"><span class="pre">JobPost.employment_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.experience"><code class="docutils literal notranslate"><span class="pre">JobPost.experience</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.expiration_date"><code class="docutils literal notranslate"><span class="pre">JobPost.expiration_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.get_next_by_posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.get_next_by_posting_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.get_previous_by_posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.get_previous_by_posting_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.id"><code class="docutils literal notranslate"><span class="pre">JobPost.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.location"><code class="docutils literal notranslate"><span class="pre">JobPost.location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.objects"><code class="docutils literal notranslate"><span class="pre">JobPost.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.position"><code class="docutils literal notranslate"><span class="pre">JobPost.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.posting_date"><code class="docutils literal notranslate"><span class="pre">JobPost.posting_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.salary_high"><code class="docutils literal notranslate"><span class="pre">JobPost.salary_high</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.salary_low"><code class="docutils literal notranslate"><span class="pre">JobPost.salary_low</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.models.JobPost.title"><code class="docutils literal notranslate"><span class="pre">JobPost.title</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-job_posts.serializers">job_posts.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.serializers.CompanySerializer"><code class="docutils literal notranslate"><span class="pre">CompanySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.serializers.CompanySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CompanySerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.serializers.JobPostSerializer"><code class="docutils literal notranslate"><span class="pre">JobPostSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.serializers.JobPostSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">JobPostSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-job_posts.viewsets">job_posts.viewsets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.filterset_class"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.list_company_job_posts"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.list_company_job_posts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.queryset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.CompanyViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CompanyViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet.filterset_class"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.queryset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job_posts.viewsets.JobPostViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">JobPostViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="portfolios.html">portfolios package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webrtc.html">webrtc package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram.html">Diagram</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Starship</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">job_posts package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/job_posts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="job-posts-package">
+<h1>job_posts package<a class="headerlink" href="#job-posts-package" title="Link to this heading"></a></h1>
+<section id="module-job_posts.filters">
+<span id="job-posts-filters-module"></span><h2>job_posts.filters module<a class="headerlink" href="#module-job_posts.filters" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.filters.</span></span><span class="sig-name descname"><span class="pre">CompanyFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.filters.CompanyFilter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FilterSet</span></code></p>
+<p>A class representing a filter for the Company model.</p>
+<p>This class is used to filter instances of the Company model based on the specified fields.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>Meta (subclass): A subclass containing metadata about the filter.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#job_posts.filters.CompanyFilter.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'company_address':</span> <span class="pre">['icontains'],</span> <span class="pre">'company_name':</span> <span class="pre">['icontains']}</span></em><a class="headerlink" href="#job_posts.filters.CompanyFilter.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#job_posts.filters.CompanyFilter.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.models.Company" title="job_posts.models.Company"><code class="xref py py-class docutils literal notranslate"><span class="pre">Company</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter.base_filters">
+<span class="sig-name descname"><span class="pre">base_filters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'company_address__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'company_name__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#job_posts.filters.CompanyFilter.base_filters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.CompanyFilter.declared_filters">
+<span class="sig-name descname"><span class="pre">declared_filters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#job_posts.filters.CompanyFilter.declared_filters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.filters.</span></span><span class="sig-name descname"><span class="pre">JobPostFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.filters.JobPostFilter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FilterSet</span></code></p>
+<p>JobPostFilter is a subclass of FilterSet and is used to filter objects of the JobPost model based on various fields.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>owner__full_name: A CharFilter that is used to filter by the full name of the job post owner.</p></li>
+</ul>
+</dd>
+<dt>Meta class:</dt><dd><ul class="simple">
+<li><p>The Meta class is used to define the model and fields to be filtered.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>filter_full_name(self, queryset, lookup, full_name): A method that filters the queryset by the full name of the job post owner. It splits the full name into parts and creates a list of queries for each part. It then applies the queries using the Q object and returns the filtered queryset.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#job_posts.filters.JobPostFilter.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'company__company_name':</span> <span class="pre">['icontains'],</span> <span class="pre">'description':</span> <span class="pre">['icontains'],</span> <span class="pre">'employment_type':</span> <span class="pre">['icontains'],</span> <span class="pre">'experience':</span> <span class="pre">['icontains'],</span> <span class="pre">'expiration_date':</span> <span class="pre">['exact',</span> <span class="pre">'gt',</span> <span class="pre">'lt',</span> <span class="pre">'range'],</span> <span class="pre">'location':</span> <span class="pre">['icontains'],</span> <span class="pre">'position':</span> <span class="pre">['icontains'],</span> <span class="pre">'posting_date':</span> <span class="pre">['exact',</span> <span class="pre">'gt',</span> <span class="pre">'lt',</span> <span class="pre">'range'],</span> <span class="pre">'salary_high':</span> <span class="pre">['exact',</span> <span class="pre">'gt',</span> <span class="pre">'lt',</span> <span class="pre">'range'],</span> <span class="pre">'salary_low':</span> <span class="pre">['exact',</span> <span class="pre">'gt',</span> <span class="pre">'lt',</span> <span class="pre">'range'],</span> <span class="pre">'title':</span> <span class="pre">['icontains']}</span></em><a class="headerlink" href="#job_posts.filters.JobPostFilter.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#job_posts.filters.JobPostFilter.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.models.JobPost" title="job_posts.models.JobPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobPost</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.base_filters">
+<span class="sig-name descname"><span class="pre">base_filters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'company__company_name__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'description__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'employment_type__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'experience__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'expiration_date':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'expiration_date__gt':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'expiration_date__lt':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'expiration_date__range':</span> <span class="pre">&lt;django_filters.filterset.BaseFilterSet.filter_for_lookup.&lt;locals&gt;.ConcreteRangeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'location__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'owner__full_name':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'position__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'posting_date':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'posting_date__gt':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'posting_date__lt':</span> <span class="pre">&lt;django_filters.filters.IsoDateTimeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'posting_date__range':</span> <span class="pre">&lt;django_filters.filterset.BaseFilterSet.filter_for_lookup.&lt;locals&gt;.ConcreteRangeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_high':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_high__gt':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_high__lt':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_high__range':</span> <span class="pre">&lt;django_filters.filterset.BaseFilterSet.filter_for_lookup.&lt;locals&gt;.ConcreteRangeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_low':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_low__gt':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_low__lt':</span> <span class="pre">&lt;django_filters.filters.NumberFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'salary_low__range':</span> <span class="pre">&lt;django_filters.filterset.BaseFilterSet.filter_for_lookup.&lt;locals&gt;.ConcreteRangeFilter</span> <span class="pre">object&gt;,</span> <span class="pre">'title__icontains':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#job_posts.filters.JobPostFilter.base_filters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.declared_filters">
+<span class="sig-name descname"><span class="pre">declared_filters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'owner__full_name':</span> <span class="pre">&lt;django_filters.filters.CharFilter</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#job_posts.filters.JobPostFilter.declared_filters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.filters.JobPostFilter.filter_full_name">
+<span class="sig-name descname"><span class="pre">filter_full_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lookup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.filters.JobPostFilter.filter_full_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-job_posts.models">
+<span id="job-posts-models-module"></span><h2>job_posts.models module<a class="headerlink" href="#module-job_posts.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.models.Company">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.models.</span></span><span class="sig-name descname"><span class="pre">Company</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.Company" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Class representing a Company.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>company_name (CharField): Name of the company.</p></li>
+<li><p>company_address (CharField): Address of the company.</p></li>
+<li><p>phone_number (CharField): Phone number of the company.</p></li>
+<li><p>website (URLField): Website of the company.</p></li>
+<li><p>is_verified (BooleanField): Flag indicating if the company is verified.</p></li>
+<li><p>created_at (DateTimeField): Timestamp representing when the company was created.</p></li>
+<li><p>updated_at (DateTimeField): Timestamp representing when the company was last updated.</p></li>
+</ul>
+</dd>
+<dt>Meta:</dt><dd><ul class="simple">
+<li><p>verbose_name (str): Singular form of the verbose name for the model in the admin interface.</p></li>
+<li><p>verbose_name_plural (str): Plural form of the verbose name for the model in the admin interface.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__str__(): Returns a string representation of the company.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="job_posts.models.Company.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#job_posts.models.Company.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="job_posts.models.Company.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#job_posts.models.Company.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.company_address">
+<span class="sig-name descname"><span class="pre">company_address</span></span><a class="headerlink" href="#job_posts.models.Company.company_address" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.company_name">
+<span class="sig-name descname"><span class="pre">company_name</span></span><a class="headerlink" href="#job_posts.models.Company.company_name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.company_posts">
+<span class="sig-name descname"><span class="pre">company_posts</span></span><a class="headerlink" href="#job_posts.models.Company.company_posts" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#job_posts.models.Company.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.Company.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.Company.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.Company.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.Company.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.Company.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.Company.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.Company.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.Company.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#job_posts.models.Company.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.is_verified">
+<span class="sig-name descname"><span class="pre">is_verified</span></span><a class="headerlink" href="#job_posts.models.Company.is_verified" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#job_posts.models.Company.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><a class="headerlink" href="#job_posts.models.Company.phone_number" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#job_posts.models.Company.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.Company.website">
+<span class="sig-name descname"><span class="pre">website</span></span><a class="headerlink" href="#job_posts.models.Company.website" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.models.JobPost">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.models.</span></span><span class="sig-name descname"><span class="pre">JobPost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.JobPost" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>JobPost represents a job posting.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>title (str): The title of the job.</p></li>
+<li><p>description (str): The description of the job.</p></li>
+<li><p>company (ForeignKey): The company associated with the job.</p></li>
+<li><p>employment_type (str, optional): The employment type for the job.</p></li>
+<li><p>location (str, optional): The location of the job.</p></li>
+<li><p>salary_high (float, optional): The upper limit of the salary for the job.</p></li>
+<li><p>salary_low (float, optional): The lower limit of the salary for the job.</p></li>
+<li><p>posting_date (DateTime): The date when the job was posted.</p></li>
+<li><p>expiration_date (DateTime, optional): The date when the job expires.</p></li>
+<li><p>experience (str, optional): The required experience for the job.</p></li>
+<li><p>position (str, optional): The position for the job.</p></li>
+</ul>
+</dd>
+<dt>Meta:</dt><dd><ul class="simple">
+<li><p>verbose_name (str): The verbose name for a single job post.</p></li>
+<li><p>verbose_name_plural (str): The verbose name for multiple job posts.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__str__(): Returns the title of the job.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#job_posts.models.JobPost.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#job_posts.models.JobPost.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.company">
+<span class="sig-name descname"><span class="pre">company</span></span><a class="headerlink" href="#job_posts.models.JobPost.company" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.company_id">
+<span class="sig-name descname"><span class="pre">company_id</span></span><a class="headerlink" href="#job_posts.models.JobPost.company_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#job_posts.models.JobPost.description" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.employment_type">
+<span class="sig-name descname"><span class="pre">employment_type</span></span><a class="headerlink" href="#job_posts.models.JobPost.employment_type" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.experience">
+<span class="sig-name descname"><span class="pre">experience</span></span><a class="headerlink" href="#job_posts.models.JobPost.experience" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.expiration_date">
+<span class="sig-name descname"><span class="pre">expiration_date</span></span><a class="headerlink" href="#job_posts.models.JobPost.expiration_date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.get_next_by_posting_date">
+<span class="sig-name descname"><span class="pre">get_next_by_posting_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">posting_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.JobPost.get_next_by_posting_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.get_previous_by_posting_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_posting_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">posting_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.models.JobPost.get_previous_by_posting_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#job_posts.models.JobPost.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.location">
+<span class="sig-name descname"><span class="pre">location</span></span><a class="headerlink" href="#job_posts.models.JobPost.location" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#job_posts.models.JobPost.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.position">
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#job_posts.models.JobPost.position" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.posting_date">
+<span class="sig-name descname"><span class="pre">posting_date</span></span><a class="headerlink" href="#job_posts.models.JobPost.posting_date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.salary_high">
+<span class="sig-name descname"><span class="pre">salary_high</span></span><a class="headerlink" href="#job_posts.models.JobPost.salary_high" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.salary_low">
+<span class="sig-name descname"><span class="pre">salary_low</span></span><a class="headerlink" href="#job_posts.models.JobPost.salary_low" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.models.JobPost.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#job_posts.models.JobPost.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-job_posts.serializers">
+<span id="job-posts-serializers-module"></span><h2>job_posts.serializers module<a class="headerlink" href="#module-job_posts.serializers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.serializers.CompanySerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.serializers.</span></span><span class="sig-name descname"><span class="pre">CompanySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.serializers.CompanySerializer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Class for serializing Company model.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>model: The model used for serialization.</p></li>
+<li><p>fields: The fields to be included in the serialized data.</p></li>
+<li><p>read_only_fields: The fields that are read-only and cannot be updated.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.serializers.CompanySerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#job_posts.serializers.CompanySerializer.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.CompanySerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'company_name',</span> <span class="pre">'company_address',</span> <span class="pre">'phone_number',</span> <span class="pre">'website',</span> <span class="pre">'is_verified']</span></em><a class="headerlink" href="#job_posts.serializers.CompanySerializer.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.CompanySerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#job_posts.serializers.CompanySerializer.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.models.Company" title="job_posts.models.Company"><code class="xref py py-class docutils literal notranslate"><span class="pre">Company</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.CompanySerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id']</span></em><a class="headerlink" href="#job_posts.serializers.CompanySerializer.Meta.read_only_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.serializers.JobPostSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.serializers.</span></span><span class="sig-name descname"><span class="pre">JobPostSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.serializers.JobPostSerializer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer class for serializing/deserializing JobPost objects.</p>
+<p>JobPostSerializer is a subclass of ModelSerializer from the <cite>serializers</cite> module of the Django REST Framework. It provides a convenient way to serialize and deserialize JobPost objects.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>company (CompanySerializer): A nested serializer used to serialize the related Company object.</p></li>
+</ul>
+</dd>
+<dt>Meta class:</dt><dd><ul class="simple">
+<li><p>model (JobPost): Specifies the model to be serialized/deserialized.</p></li>
+<li><p>fields (list): Specifies the fields to be included in the serialized output.</p></li>
+<li><p>read_only_fields (list): Specifies the fields that should be read-only when deserializing.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.serializers.JobPostSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#job_posts.serializers.JobPostSerializer.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.JobPostSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'title',</span> <span class="pre">'description',</span> <span class="pre">'company',</span> <span class="pre">'employment_type',</span> <span class="pre">'location',</span> <span class="pre">'salary_low',</span> <span class="pre">'salary_high',</span> <span class="pre">'posting_date',</span> <span class="pre">'expiration_date',</span> <span class="pre">'experience',</span> <span class="pre">'position']</span></em><a class="headerlink" href="#job_posts.serializers.JobPostSerializer.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.JobPostSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#job_posts.serializers.JobPostSerializer.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.models.JobPost" title="job_posts.models.JobPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobPost</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.serializers.JobPostSerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'company']</span></em><a class="headerlink" href="#job_posts.serializers.JobPostSerializer.Meta.read_only_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-job_posts.viewsets">
+<span id="job-posts-viewsets-module"></span><h2>job_posts.viewsets module<a class="headerlink" href="#module-job_posts.viewsets" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.viewsets.</span></span><span class="sig-name descname"><span class="pre">CompanyViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RetrieveModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ListModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GenericViewSet</span></code></p>
+<p>This class represents a viewset for accessing and manipulating Company objects.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>queryset: A queryset representing all Company objects.</p></li>
+<li><p>filter_backends: A list of filter backend classes to apply when filtering the queryset.</p></li>
+<li><p>filterset_class: A filterset class to use for filtering the queryset.</p></li>
+<li><p>serializer_class: The serializer class to use for serializing and deserializing Company objects.</p></li>
+<li><p>permission_classes: A list of permission classes to apply when checking access permissions for the view.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>list_company_job_posts(request, pk=None): Retrieves a list of job posts associated with a specific company.</dt><dd><dl class="simple">
+<dt>Parameters:</dt><dd><ul>
+<li><p>request: The request object.</p></li>
+<li><p>pk: The primary key of the company.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul>
+<li><p>The list of job posts serialized as JSON, along with a status code indicating success (200 OK).</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.filter_backends">
+<span class="sig-name descname"><span class="pre">filter_backends</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;]</span></em><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.filter_backends" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.filterset_class">
+<span class="sig-name descname"><span class="pre">filterset_class</span></span><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.filterset_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.filters.CompanyFilter" title="job_posts.filters.CompanyFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompanyFilter</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.list_company_job_posts">
+<span class="sig-name descname"><span class="pre">list_company_job_posts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.list_company_job_posts" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'courses.permissions.IsOwnerOrReadOnly'&gt;]</span></em><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.permission_classes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.queryset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.CompanyViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#job_posts.viewsets.CompanyViewSet.serializer_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.serializers.CompanySerializer" title="job_posts.serializers.CompanySerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompanySerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">job_posts.viewsets.</span></span><span class="sig-name descname"><span class="pre">JobPostViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RetrieveModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ListModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GenericViewSet</span></code></p>
+<p>A ViewSet for handling job post related actions.</p>
+<dl class="simple">
+<dt>This ViewSet provides the following actions:</dt><dd><ul class="simple">
+<li><p>retrieve: Retrieves a single job post instance.</p></li>
+<li><p>list: Retrieves a list of job posts.</p></li>
+</ul>
+</dd>
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>queryset (QuerySet): The queryset used for retrieving job posts.</p></li>
+<li><p>filter_backends (list): A list of filter backends to apply when filtering job posts.</p></li>
+<li><p>filterset_class (FilterSet): The filterset class used for filtering job posts.</p></li>
+<li><p>serializer_class (Serializer): The serializer class used for serializing job posts.</p></li>
+<li><p>permission_classes (list): A list of permission classes to apply for job post actions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet.filter_backends">
+<span class="sig-name descname"><span class="pre">filter_backends</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;]</span></em><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet.filter_backends" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet.filterset_class">
+<span class="sig-name descname"><span class="pre">filterset_class</span></span><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet.filterset_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.filters.JobPostFilter" title="job_posts.filters.JobPostFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobPostFilter</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'courses.permissions.IsOwnerOrReadOnly'&gt;]</span></em><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet.permission_classes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet.queryset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="job_posts.viewsets.JobPostViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#job_posts.viewsets.JobPostViewSet.serializer_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#job_posts.serializers.JobPostSerializer" title="job_posts.serializers.JobPostSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobPostSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="courses.html" class="btn btn-neutral float-left" title="courses package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="portfolios.html" class="btn btn-neutral float-right" title="portfolios package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Azeno Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

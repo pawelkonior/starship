@@ -1,17 +1,101 @@
 services:
-  backend:
+  api:
     build:
-      context: ./backend
-    command: python manage.py runserver 0.0.0.0:8000
+      context: ./api
+      target: development
     env_file:
-      - backend/env/.env
+      - ./envs/api.env
+      - ./envs/postgres.env
+    depends_on:
+      - postgres
+    networks:
+      - postgres_network
+      - api_network
+      - redis_network
     ports:
       - "8000:8000"
     restart: on-failure
     volumes:
-      - ./backend:/app
+      - ./api:/app
+
+  postgres:
+    image: postgres:16
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data
+    env_file:
+      - ./envs/postgres.env
+    ports:
+      - "5433:5432"
     networks:
-      - proxy_backend
+      - postgres_network
+
+  proxy:
+    build:
+      context: proxy
+    ports:
+      - "80:80"
+    restart: on-failure
+    networks:
+      - api_network
+      - docs_network
+    depends_on:
+      - api
+    volumes:
+      - ./api/media:/media
+
+  web:
+    build:
+      context: ./web
+      target: development
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    networks:
+      - api_network
+    volumes:
+      - ./web:/app
+      - node_modules:/app/node_modules
+    restart: on-failure
+    command: npm run dev
+    stdin_open: true
+    tty: true
+
+  docs:
+    build:
+      context: ./docs
+    ports:
+      - "8001:8001"
+    restart: on-failure
+    stdin_open: true
+    tty: true
+    networks:
+      - docs_network
+
+  redis:
+    image: redis:7.2.3
+    env_file:
+      - ./envs/api.env
+    ports:
+      - "6379:6379"
+    volumes:
+      - 'redis_data:/data'
+    networks:
+      - redis_network
+
+
+volumes:
+  redis_data:
+  postgres_volume:
+  node_modules:
+  media_volume:
+    driver: local
 
 networks:
-  proxy_backend:
+  postgres_network:
+    driver: bridge
+  api_network:
+    driver: bridge
+  redis_network:
+    driver: bridge
+  docs_network:
+    driver: bridge

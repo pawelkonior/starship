@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "starship api"
+version = "0.1.0"
+description = "To be done"
+authors = ["Azeno team"]
+license = "To be set"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.2"
+Django = "4.2.10"
+pytest-cov = "4.1.0"
+pytest-django = "4.8.0"
+flake8-django = "1.4"
+black = "24.2.0"
+psycopg = "3.1.18"
+dj-database-url = "2.1.0"
+whitenoise = "6.6.0"
+channels = {version = "4.0.0", extras = ["daphne"]}
+uvicorn = {version = "^0.24.0.post1", extras = ["standard"]}
+djangorestframework = "3.14.0"
+djangorestframework-simplejwt = "5.3.0"
+drf-spectacular = "0.27.1"
+openai = "1.17.1"
+django-filter = "24.2"
+channels-redis = "4.2.0"
+pillow = "10.2.0"
+django-jazzmin = "2.6.1"
+sphinx = "7.3.7"
+sphinx-rtd-theme = "2.0.0"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+# -- recommended but optional:
+python_files = ["test_*.py"]
+
+addopts = [
+   "--cov=.",
+   "--cov-config=.coveragerc",
+   "--cov-report",
+   "term-missing:skip-covered",
+   "--cov-fail-under=80"
+]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

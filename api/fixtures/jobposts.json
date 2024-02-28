@@ -1,0 +1,121 @@
+[
+  {
+    "model": "job_posts.jobpost",
+    "pk": 1,
+    "fields": {
+      "title": "Senior Developer",
+      "description": "Dołącz do naszego zespołu w FutureNet Solutions i pomóż nam rozwijać innowacyjne rozwiązania, które wpływają na przyszłość naszej branży. Poszukujemy osoby z pasją do technologii, która jest gotowa na podjęcie wyzwań w dynamicznym środowisku. Będziesz pracować z najnowszymi technologiami i współpracować z zespołem ekspertów, aby dostarczać produkty najwyższej jakości.",
+      "company": 6,
+      "employment_type": "Pełny etat / Kontrakt / B2B",
+      "location": "Wrocław",
+      "salary_high": "30000.00",
+      "salary_low": "20000.00",
+      "posting_date": "2024-04-14T21:08:47.190Z",
+      "expiration_date": "2024-04-29T21:08:11Z",
+      "experience": "Minimum 5 lat doświadczenia w pracy jako [stanowisko, np. developer]\r\nBiegła znajomość [języków programowania/technologii, np. Java, SQL]\r\nDoświadczenie w [specyficzne wymagania, np. pracy z mikrousługami, zarządzaniu projektami IT]",
+      "position": "Tech Lead"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 2,
+    "fields": {
+      "title": "Data Scientist",
+      "description": "Dołącz do naszego zespołu w Quantum Computing Corp i pomóż nam w analizie dużych zbiorów danych. Poszukujemy specjalisty z głębokim zrozumieniem analizy danych i sztucznej inteligencji, gotowego do pracy w zespole wiodących ekspertów.",
+      "company": 5,
+      "employment_type": "Pełny etat / Kontrakt",
+      "location": "Kraków",
+      "salary_high": "28000.00",
+      "salary_low": "18000.00",
+      "posting_date": "2024-04-14T22:10:30.123Z",
+      "expiration_date": "2024-05-14T22:10:30Z",
+      "experience": "Minimum 3 lat doświadczenia w pracy jako Data Scientist\r\nZnajomość Pythona, R, SQL\r\nDoświadczenie w machine learning i big data",
+      "position": "Senior Data Scientist"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 3,
+    "fields": {
+      "title": "Project Manager",
+      "description": "Szukamy Project Managera do zarządzania projektami w EcoSolutions Tech. Oferujemy możliwość pracy nad ekscytującymi projektami, które mają realny wpływ na ochronę środowiska.",
+      "company": 5,
+      "employment_type": "Kontrakt / B2B",
+      "location": "Gdańsk",
+      "salary_high": "25000.00",
+      "salary_low": "15000.00",
+      "posting_date": "2024-04-14T23:15:45.567Z",
+      "expiration_date": "2024-05-14T23:15:45Z",
+      "experience": "Minimum 4 lat doświadczenia jako Project Manager\r\nZnajomość metodyk zarządzania projektami, np. Agile, Scrum\r\nUmiejętności lidera zespołu",
+      "position": "IT Project Manager"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 4,
+    "fields": {
+      "title": "UI/UX Designer",
+      "description": "GreenTech Innovations poszukuje kreatywnego UI/UX Designera, który dołączy do naszego zespołu projektantów. Praca nad projektami skupionymi na zielonych technologiach i ich wpływie na użytkowników.",
+      "company": 6,
+      "employment_type": "Pełny etat",
+      "location": "Warszawa",
+      "salary_high": "22000.00",
+      "salary_low": "16000.00",
+      "posting_date": "2024-04-15T08:20:40.987Z",
+      "expiration_date": "2024-05-15T08:20:40Z",
+      "experience": "Minimum 2 lata doświadczenia w projektowaniu interfejsów użytkownika\r\nZnajomość narzędzi typu Sketch, Adobe XD, Figma\r\nPortfolio ukazujące dotychczasowe projekty",
+      "position": "Senior UI/UX Designer"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 5,
+    "fields": {
+      "title": "Network Security Expert",
+      "description": "Advanced Robotics szuka eksperta od bezpieczeństwa sieciowego. Dołącz do nas i pomóż chronić nasze roboty i systemy przed cyberatakami.",
+      "company": 3,
+      "employment_type": "B2B",
+      "location": "Poznań",
+      "salary_high": "27000.00",
+      "salary_low": "21000.00",
+      "posting_date": "2024-04-15T09:25:50.654Z",
+      "expiration_date": "2024-05-15T09:25:50Z",
+      "experience": "Minimum 5 lat doświadczenia w bezpieczeństwie sieciowym\r\nZnajomość technologii VPN, firewalls, IDS/IPS\r\nCertyfikaty z zakresu bezpieczeństwa (np. CISSP, CEH)",
+      "position": "Chief Security Officer"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 6,
+    "fields": {
+      "title": "Machine Learning Engineer",
+      "description": "FutureNet Solutions poszukuje inżyniera machine learning do pracy nad przyszłościowymi projektami w dziedzinie sztucznej inteligencji.",
+      "company": 3,
+      "employment_type": "Pełny etat / B2B",
+      "location": "Wrocław",
+      "salary_high": "32000.00",
+      "salary_low": "25000.00",
+      "posting_date": "2024-04-15T10:30:30.321Z",
+      "expiration_date": "2024-05-15T10:30:30Z",
+      "experience": "Minimum 3 lat doświadczenia w pracy jako Machine Learning Engineer\r\nBiegła znajomość Python, TensorFlow, PyTorch\r\nDoświadczenie w projektach AI i analizie danych",
+      "position": "AI Specialist"
+    }
+  },
+  {
+    "model": "job_posts.jobpost",
+    "pk": 7,
+    "fields": {
+      "title": "Cloud Solutions Architect",
+      "description": "EcoDynamic Ventures poszukuje architekta rozwiązań chmurowych do tworzenia i implementacji strategii chmurowych, które pomogą naszym klientom w efektywniejszym zarządzaniu zasobami.",
+      "company": 3,
+      "employment_type": "Kontrakt / B2B",
+      "location": "Warszawa",
+      "salary_high": "34000.00",
+      "salary_low": "28000.00",
+      "posting_date": "2024-04-15T11:35:40.843Z",
+      "expiration_date": "2024-05-15T11:35:40Z",
+      "experience": "Minimum 5 lat doświadczenia jako Cloud Architect\r\nZnajomość AWS, Azure, Google Cloud\r\nUmiejętności projektowania i zarządzania infrastrukturą IT",
+      "position": "Cloud Architect"
+    }
+  }
+]
